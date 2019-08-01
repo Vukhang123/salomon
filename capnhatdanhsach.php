@@ -1,6 +1,6 @@
     
 <?php
-require_once __DIR__ . 'dbconnect.php';
+require_once __DIR__ . '/dbconnect.php';
 $sql = "SELECT * FROM loaisanpham;";
 $result = mysqli_query($conn, $sql);
 $data = [];
@@ -18,5 +18,19 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     ['lsp_ma' => 3, 'lsp_ten' => 'MÃ¡y tÃ­nh báº£ng', 'lsp_mota' => ''],
 ]
 */
-print_r($data);die;
+/*print_r($data);die;*/
 ?>
+<table border="1">
+<tr>
+    <th>Mã</th>
+    <th>Tên</th>
+    <th>Mô Tả</th>
+</tr>
+<?php foreach($data as $row) : ?>
+<tr>
+    <td><?= $row['lsp_ma'];?></td>
+    <td><?= $row['lsp_ten'];?></td>
+    <td><?= $row['lsp_mota'];?></td>
+</tr>
+<?php endforeach; ?>
+</table> 
