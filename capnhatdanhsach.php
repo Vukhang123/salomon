@@ -25,12 +25,20 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     <th>Mã</th>
     <th>Tên</th>
     <th>Mô Tả</th>
+    <th>Chức năng</th>
+
 </tr>
 <?php foreach($data as $row) : ?>
 <tr>
     <td><?= $row['lsp_ma'];?></td>
     <td><?= $row['lsp_ten'];?></td>
     <td><?= $row['lsp_mota'];?></td>
+    <td>
+        <a href="/salomon/Sua.php?id=<?= $row['lsp_ma'];?>">sua</a>
+    </td>
+    <td>
+        <a href="/salomon/Xoa.php?id=<?= $row['lsp_ma'];?>">Xóa</a>
+    </td>
 </tr>
 <?php endforeach; ?>
 </table> 
