@@ -1,0 +1,3 @@
+<?php
+xin chao
+?>
