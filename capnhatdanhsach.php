@@ -20,6 +20,13 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 */
 /*print_r($data);die;*/
 ?>
+<style>
+    .mau{
+        background:red;
+    
+        
+    }
+</style>
 <table border="1">
 <tr>
     <th>Mã</th>
@@ -33,7 +40,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     <td><?= $row['lsp_ma'];?></td>
     <td><?= $row['lsp_ten'];?></td>
     <td><?= $row['lsp_mota'];?></td>
-    <td>
+    <td  class="mau">
         <a href="/salomon/Sua.php?id=<?= $row['lsp_ma'];?>">sua</a>
     </td>
     <td>
