@@ -42,6 +42,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     <td><?= $row['lsp_mota'];?></td>
     <td  class="mau">
         <a href="/salomon/Sua.php?id=<?= $row['lsp_ma'];?>">sua</a>
+    
     </td>
     <td>
         <a href="/salomon/Xoa.php?id=<?= $row['lsp_ma'];?>">Xóa</a>
