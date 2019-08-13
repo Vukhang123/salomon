@@ -7,8 +7,8 @@
   
 ?>
 <form  id="themsanpham" name="themsanpham" method="post" action="/web/loaisanpham.php" >
-    tensanpham: <input type="text" name="tsp" id="tsp"></br>
-    motasanpham: <input type="text" name="mtsp" id="mtsp"></br>
+    tensanpham: <input type="text" name="tsp" id="tsp"><br>
+    motasanpham: <input type="text" name="mtsp" id="mtsp"><br>
     <input type="submit" name="them" value="them">
 
 </form>
