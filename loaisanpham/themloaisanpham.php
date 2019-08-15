@@ -13,7 +13,7 @@ while ($row = mysqli_fetch_array($resultLoaisanpham, MYSQLI_ASSOC)) {
 }
 ?>
 <form name="frmLoaisanpham" id="frmLoaisanpham" method="POST" action="">
-      Tên Loại Sản Phẩm :<input type="text" name="lsp_ten" id="lsp_ten" /><br>
+      Tên Loại Sản Phẩm :<input type="text" name="lsp_ten" id="lsp_ten" class="" /><br>
       <input type="submit" name="btnthem" id="btnthem" value="Them"/>
 </form>
 <?php

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Salomon</title>
     <link href="public/vendor/boostrap/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="public/vendor/fonawesone/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
     <style>
     div {
         border: 2px solid green;
@@ -26,15 +27,37 @@
         <!-- Noi Dung -->
              <div class="col-md-3">
                 <ul class="list-group">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item"><a href="?page=danhsachloaisanpham">Loại sản phẩm</a></li>
+                    <li class="list-group-item"><a href="?page=danhsachsanpham">Sản phẩm</a></li>
+                    <li class="list-group-item"><a href="?page=danhsachnhasanxuat">Nhà sản xuất</a></li>
+                    <li class="list-group-item"><a href="dondathang\danhsachdondathang.php">Đơn dặt hàng</a></li>
                     <li class="list-group-item">Vestibulum at eros</li>
                 </ul>
              </div>
               <div class="col-md-9">
-                CONTENT
+              <?php
+                $page = isset($_GET['page']) ? $_GET['page'] : 'sanpham_danhsach';
+
+                if($page == 'danhsachloaisanpham'){
+                    include('loaisanpham/capnhatdanhsach.php');
+                }   
+                else if($page == 'danhsachsanpham'){
+                    include('sanpham/danhsachsanpham.php');
+                }   
+                else if($page == 'danhsachnhasanxuat'){
+                    include('nhasanxuat/danhsachnhasanxuat.php');
+                }   
+                else if($page == 'danhsachnhasanxuat'){
+                    include('nhasanxuat/danhsachnhasanxuat.php');
+                }   
+                else if($page == 'themloaisanpham'){
+                    include('loaisanpham/themloaisanpham.php');
+                }   
+                else if($page == 'themsanpham'){
+                    include('sanpham/themsanpham.php');
+                }   
+                 ?>
+                
             </div><!-- /End content -->
         </div>
        

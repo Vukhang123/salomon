@@ -60,9 +60,9 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
 
 </style>
-<table class="table">
+<a href="/salomon/?page=themloaisanpham" class="btn btn-outline-primary"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm Loại sản phẩm</a>
+<table class="table table-bordered table-hover table-responsive table-sm">
 <thead class="thead">
-
 <tr>
     <th>Mã</th>
     <th>Tên</th>
@@ -71,7 +71,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
 </tr>
 </thead>
-<body>
+<tbody>
 <?php foreach($data as $row) : ?>
 <tr>
     <td><?= $row['lsp_ma'];?></td>
@@ -95,5 +95,5 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
 </tr>
 <?php endforeach; ?>
-</body>
+</tbody>
 </table> 
