@@ -9,10 +9,10 @@
     print_r($loaisanphamRow);
 ?>
 <form name="frmsua" id="frmsua" method="POST" action="">
-    Mã Sản Phẩm:<input type="text" name="lsp_ma" id="lsp_ma" readonly value="<?php echo $loaisanphamRow['lsp_ma'] ?>" /><br />
-    Tên Sản Phẩm:<input type="text" name="lsp_ten" id="lsp_ten" value="<?= $loaisanphamRow['lsp_ten'] ?>" /><br />
-    Tên mô tả Sản Phẩm:<input type="text" name="lsp_mota" id="lsp_mota" value="<?= $loaisanphamRow['lsp_mota'] ?>" /><br />
-    <input type="submit" name="btnsua" id="btnsua" value="SAVE"/>
+    Mã Sản Phẩm:<input type="text" name="lsp_ma" id="lsp_ma" readonly value="<?php echo $loaisanphamRow['lsp_ma'] ?>" class="form-control" /><br />
+    Tên Sản Phẩm:<input type="text" name="lsp_ten" id="lsp_ten" value="<?= $loaisanphamRow['lsp_ten'] ?>" class="form-control"/><br />
+    Tên mô tả Sản Phẩm:<input type="text" name="lsp_mota" id="lsp_mota" value="<?= $loaisanphamRow['lsp_mota'] ?>" class="form-control"/><br />
+    <input type="submit" name="btnsua" id="btnsua" value="SAVE" class="btn btn-primary"/>
 </form>
 
 <?php

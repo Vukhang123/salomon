@@ -13,8 +13,8 @@ while ($row = mysqli_fetch_array($resultNhasanxuat, MYSQLI_ASSOC)) {
     );
 }
 ?>
-<table border="1">
-    <thead>
+<table class="table table-bordered table-hover table-responsive table-sm">
+    <thead class="thead-dark">
         <tr>
             <th>Mã Nhà Sản Xuất</th>
             <th>Tên Nhà Sản Xuất</th>

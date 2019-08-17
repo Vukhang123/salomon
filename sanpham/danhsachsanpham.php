@@ -28,8 +28,9 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 // var_dump($data);die;
 ?>
 <a href="/salomon/?page=themsanpham" class="btn btn-outline-primary"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm Sản phẩm</a>
+<div class="table-responsive-sm">
 <table class="table table-bordered table-hover table-responsive table-sm">
-    <thead>
+    <thead class="thead-dark">
         <tr>
             <th>Mã sản phẩm</th>
             <th>Tên sản phẩm</th>
@@ -56,10 +57,11 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
             <td><?= $row['nsx_ten'] ?></td>
             <td><?= $row['km_ten'] ?></td>
             <td>
-                <a href="/web02/sanpham/sua.php?sp_ma=<?= $row['sp_ma']; ?>">Sửa</a>
+                <a href="/salomon/?page=suasanpham?sp_ma=<?= $row['sp_ma']; ?>">Sửa</a>
                 <a href="/web02/sanpham/xoa.php?sp_ma=<?= $row['sp_ma']; ?>">Xóa</a>
             </td>
         </tr>
         <?php endforeach; ?>
     </tbody>
 </table>
+</div>

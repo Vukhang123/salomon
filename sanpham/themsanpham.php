@@ -39,35 +39,35 @@ while ($row = mysqli_fetch_array($resultKhuyenMai, MYSQLI_ASSOC)) {
 ?>
 
 <form name="frmThemMoiSanPham" id="frmThemMoiSanPham" method="post" action="">
-    Tên sản phẩm: <input type="text" name="sp_ten" id="sp_ten" /><br />
-    Giá sản phẩm: <input type="text" name="sp_gia" id="sp_gia" /><br />
-    Giá cũ sản phẩm: <input type="text" name="sp_giacu" id="sp_giacu" /><br />
-    Mô tả ngắn sản phẩm: <input type="text" name="sp_mota_ngan" id="sp_mota_ngan" /><br />
-    Mô tả chi tiết sản phẩm: <input type="text" name="sp_mota_chitiet" id="sp_mota_chitiet" /><br />
-    Ngày cập nhật sản phẩm: <input type="text" name="sp_ngaycapnhat" id="sp_ngaycapnhat" /><br />
-    Số lượng sản phẩm: <input type="text" name="sp_soluong" id="sp_soluong" /><br />
+    Tên sản phẩm: <input type="text" name="sp_ten" id="sp_ten" class="form-control"/><br />
+    Giá sản phẩm: <input type="text" name="sp_gia" id="sp_gia" class="form-control"/><br />
+    Giá cũ sản phẩm: <input type="text" name="sp_giacu" id="sp_giacu" class="form-control"/><br />
+    Mô tả ngắn sản phẩm: <input type="text" name="sp_mota_ngan" id="sp_mota_ngan" class="form-control"/><br />
+    Mô tả chi tiết sản phẩm: <input type="text" name="sp_mota_chitiet" id="sp_mota_chitiet" class="form-control"/><br />
+    Ngày cập nhật sản phẩm: <input type="text" name="sp_ngaycapnhat" id="sp_ngaycapnhat" class="form-control"/><br />
+    Số lượng sản phẩm: <input type="text" name="sp_soluong" id="sp_soluong" class="form-control"/><br />
     Loại sản phẩm: 
-    <select name="lsp_ma" id="lsp_ma">
+    <select name="lsp_ma" id="lsp_ma" class="form-control">
         <?php foreach($dataLoaiSanPham as $loaiSanPham) : ?>
         <option value="<?= $loaiSanPham['lsp_ma'] ?>"><?= $loaiSanPham['lsp_ten'] ?></option>
         <?php endforeach; ?>
     </select>
     <br />
     Nhà sản xuất: 
-    <select name="nsx_ma" id="nsx_ma">
+    <select name="nsx_ma" id="nsx_ma" class="form-control">
         <?php foreach($dataNhaSanXuat as $nhasanxuat) : ?>
         <option value="<?= $nhasanxuat['nsx_ma'] ?>"><?= $nhasanxuat['nsx_ten'] ?></option>
         <?php endforeach; ?>
     </select>
     <br />
     Khuyến mãi: 
-    <select name="km_ma" id="km_ma">
+    <select name="km_ma" id="km_ma" class="form-control">
         <?php foreach($dataKhuyenMai as $khuyenmai) : ?>
         <option value="<?= $khuyenmai['km_ma'] ?>"><?= $khuyenmai['km_ten'] ?></option>
         <?php endforeach; ?>
     </select>
     <br />
-    <input type="submit" name="btnLuu" id="btnLuu" value="Lưu dữ liệu" />
+    <input type="submit" name="btnLuu" id="btnLuu" value="Lưu dữ liệu" class="btn btn-primary" />
 </form>
 
 <?php
