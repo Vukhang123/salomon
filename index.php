@@ -8,9 +8,7 @@
     <link href="public/vendor/boostrap/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
     <link href="public/vendor/fonawesone/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
     <style>
-    div {
-        border: 1px solid black;
-    }
+    
     </style>
 </head>
 <body>
@@ -34,7 +32,7 @@
                        <a href="#menuloaisanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
                        Loai san pham
                        </a>
-                         <ul class="collapse show" id="menuloaisanpham" style>
+                         <ul class="collapse " id="menuloaisanpham" style>
                             <li class="nav-item">
                                 <a class="nav-link" href="?page=danhsachloaisanpham">
                                     Danh sach
@@ -51,7 +49,7 @@
                        <a href="#menusanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
                        San Pham
                        </a>
-                         <ul class="collapse show" id="menusanpham" style>
+                         <ul class="collapse " id="menusanpham" style>
                             <li class="nav-item">
                                 <a class="nav-link" href="?page=danhsachsanpham">
                                     Danh sach
@@ -68,7 +66,7 @@
                        <a href="#menunhasanxuat" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
                        Nha San Xuat
                        </a>
-                         <ul class="collapse show" id="menunhasanxuat" style>
+                         <ul class="collapse " id="menunhasanxuat" style>
                             <li class="nav-item">
                                 <a class="nav-link" href="?page=danhsachnhasanxuat">
                                     Danh sach
@@ -127,6 +125,10 @@
     <script src="public/vendor/poperjs/popper.min.js"> </script>
 <!-- Liên kết thư viện Bootstrap 4 -->
     <script src="public/vendor/boostrap/bootstrap/js/bootstrap.min.js"> </script>
+<!-- Liên kết thư viện sweetalert 2 -->  
+    <script src="public/vendor/seetarlert2/sweetalert2.all.min.js"> </script>
+<!-- Custom script -->
+<script src=public/js/sanpham/sanpham.js></script>    
     
 </body>
 </html> <!--          <ul class="list-group">
