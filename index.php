@@ -6,48 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Salomon</title>
     <link href="public/vendor/boostrap/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="public/css/sanpham/sanpham.css" type="text/css" rel="stylesheet" />
     <link href="public/vendor/fonawesone/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
     <style>
     
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 ">
-              <i class="fa fa-list" aria-hidden="true"></i> Danh Sach
+    <div class="container-fluid">
+        <div class="row table ">
+            <div class="col-md-3 col-12 col-xl-3 ">
+              <i class="fa fa-tags fw"></i> Danh Sach
             </div>    
-            <div class="col-md-6 ">
-                <input class="form-control form-control-dark w-100" type="text" placeholder="Tìm kiếm"  />
-            </div>    
-            <div class="col-md-3 ">
+              
+            <div class="col-md-9 col-12 col-xl-9 ">
                 Dang Nhap
             </div>    
         </div>
+    <div class="container">    
         <div class="row">
         <!-- Noi Dung -->
-             <div class="col-md-3">
-                <ul class="nav flex-column">
-                    <li class="nav-item">                
+        <div class="col-md-2 bg-dark a ">
+            
+            <div class=" bg1 active">
+                <span class="fa fa-bars"></span> NAVITION
+            </div>
+                <ul class="nav flex-column table table-hover ">
+                    <li class="nav-item light">                
                        <a href="#menuloaisanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
-                       Loai san pham
+                             <i class="fa fa-list-ul" aria-hidden="true"></i> Loai san pham
                        </a>
                          <ul class="collapse " id="menuloaisanpham" style>
                             <li class="nav-item">
                                 <a class="nav-link" href="?page=danhsachloaisanpham">
-                                    Danh sach
+                                    <i class="fa fa-plus-square-o" aria-hidden="true"></i> Danh sach
                                 </a>
                             </li>                         
                             <li class="nav-item">
                                 <a class="nav-link" href="?page=themloaisanpham">
-                                    Them Loai San Pham
+                                <i class="fa fa-plus-square-o" aria-hidden="true"></i> Them Loai San Pham
                                 </a>
                             </li>                         
                          </ul>
                     </li>                 
                     <li class="nav-item">                
                        <a href="#menusanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
-                       San Pham
+                            <i class="fa fa-list-ul" aria-hidden="true"></i> San Pham
                        </a>
                          <ul class="collapse " id="menusanpham" style>
                             <li class="nav-item">
@@ -64,7 +68,7 @@
                    </li>                 
                     <li class="nav-item">                
                        <a href="#menunhasanxuat" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
-                       Nha San Xuat
+                          <i class="fa fa-list-ul" aria-hidden="true"></i> Nha San Xuat
                        </a>
                          <ul class="collapse " id="menunhasanxuat" style>
                             <li class="nav-item">
@@ -81,7 +85,7 @@
                    </li>                 
                 </ul>
              </div>
-              <div class="col-md-9">
+              <div class="col-md-10  bg" >
               <?php
                 $page = isset($_GET['page']) ? $_GET['page'] : 'sanpham_danhsach';
 
@@ -113,6 +117,7 @@
                 
             </div><!-- /End content -->
         </div>
+       </div> 
        
     </div>
 

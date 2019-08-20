@@ -1,0 +1,21 @@
+.sidebar{
+    
+    font-style: Arial;
+    font-weight: bold;
+    font-size: 100%;
+    color: darkgrey;
+}
+a {
+    color: #e3e7eb;
+    text-decoration: none;
+    /* background-color: #4d4646a6; */
+}
+.bg{
+    background-color: #e4eaf0;
+}
+.bg1{
+    color: #e3e7eb;
+    text-decoration: none;
+     background-color: #020202a6;
+     
+}

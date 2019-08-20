@@ -20,7 +20,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 */
 /*print_r($data);die;*/
 ?>
-<style>
+<!-- <style>
     .sua{
         background-color:#ffc107;
         color:black;
@@ -56,13 +56,18 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     border: 1px solid black; 
     border-collapse: collapse;
     border-spacing: 2px;
-}
+} -->
 
 
-</style>
-<a href="/salomon/?page=themloaisanpham" class="btn btn-outline-primary"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm Loại sản phẩm</a>
+<!-- </style> -->
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+   <h1 class="h2">
+        Danh Sách Loại Sản Phẩm
+   </h1> 
+</div>
+<a href="/salomon/?page=themloaisanpham" class="btn btn-dark"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm Loại sản phẩm</a>
 <div class="table-responsive-sm">
-<table class="table table-bordered table-hover table-responsive table-sm">
+<table class="table table-bordered table-hover table-sm">
     <thead class="thead-dark">
         <tr>
             <th>Mã</th>
@@ -96,6 +101,16 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
 </tr>
 <?php endforeach; ?>
+
 </tbody>
 </table> 
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</nav>
 </div>

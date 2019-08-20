@@ -27,9 +27,14 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 }
 // var_dump($data);die;
 ?>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+   <h1 class="h2">
+        Danh Sách Sản Phẩm
+   </h1> 
+</div>
 <a href="/salomon/?page=themsanpham" class="btn btn-outline-primary"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm Sản phẩm</a>
 <div class="table-responsive-sm">
-<table class="table table-bordered table-hover table-responsive table-sm">
+<table class="table table-bordered table-hover table-sm">
     <thead class="thead-dark">
         <tr>
             <th>Mã sản phẩm</th>
@@ -66,6 +71,20 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
             </td>
         </tr>
         <?php endforeach; ?>
+        
     </tbody>
 </table>
+<nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-end">
+            <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+        </nav>
 </div>
