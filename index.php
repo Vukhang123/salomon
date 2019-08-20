@@ -110,9 +110,7 @@
                 else if($page == 'sualoaisanpham'){
                     include('loaisanpham/sua.php');
                 }   
-                else if($page == 'suasanpham'){
-                    include('sanpham/suasanpham.php');
-                }   
+                 
                  ?>
                 
             </div><!-- /End content -->
@@ -133,10 +131,51 @@
 <!-- Liên kết thư viện sweetalert 2 -->  
     <script src="public/vendor/seetarlert2/sweetalert2.all.min.js"> </script>
 <!-- Custom script -->
-<script src=public/js/sanpham/sanpham.js></script>    
+    <script src=public/js/sanpham/sanpham.js></script>   
+
+
+    <?php if($page == 'themsanpham') : ?>
+        <script src="public/vendor/distvalidation/jquery.validate.min.js"></script>
+        <script src="public/vendor/distvalidation/localization/messages_vi.min.js"></script>
+        <script src="public/js/sanpham/sanpham-validate.js"></script>
+    <?php endif ?> 
     
 </body>
-</html> <!--          <ul class="list-group">
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!--          <ul class="list-group">
                     <li class="list-group-item"><a href="?page=danhsachloaisanpham" class="nav-link dropdown-toggle">Loại sản phẩm</a>
                         <ul class="collapse" id="loaisanphamMenu">
                           
