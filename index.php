@@ -14,112 +14,128 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row table ">
-            <div class="col-md-3 col-12 col-xl-3 ">
-              <i class="fa fa-tags fw"></i> Danh Sach
-            </div>    
-              
-            <div class="col-md-9 col-12 col-xl-9 ">
-                Dang Nhap
-            </div>    
-        </div>
-    <div class="container">    
-        <div class="row">
-        <!-- Noi Dung -->
-        <div class="col-md-2 bg-dark a ">
-            
-            <div class=" bg1 active">
-                <span class="fa fa-bars"></span> NAVITION
+                    <div class="row table-dark ">
+                        <div class="col-md-2 col-12 col-xl-2 ">
+                        <i class="fa fa-tags fw"></i> Danh Sach
+                        </div>    
+                        
+                        <div class="col-md-10 col-12 col-xl-10 ">
+                            Dang Nhap
+                        </div>    
+                    </div>
+    </div>            
+        <div class="container-fluid">    
+            <div class="row">
+                <!-- Noi Dung -->
+                <div class="col-md-2 col-12 col-xl-2 table-dark ">          
+                        <ul class="nav flex-column ">
+                            <li class="nav-item a1 ">                
+                            <a href="#menuloaisanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle a ">
+                                    <i class="fa fa-list-alt" aria-hidden="true"></i> Loai san pham
+                            </a>
+                                <ul class="collapse " id="menuloaisanpham" style>
+                                    <li class="nav">
+                                        <a class="nav-link" href="?page=danhsachloaisanpham">
+                                            <i class="fa fa-angle-double-right" aria-hidden="true"></i> Danh sach
+                                        </a>
+                                    </li>                         
+                                    <li class="nav">
+                                        <a class="nav-link" href="?page=themloaisanpham">
+                                            <i class="fa fa-angle-double-right" aria-hidden="true"></i> Them Loai San Pham
+                                        </a>
+                                    </li>                         
+                                </ul>
+                            </li>                 
+                            <li class="nav-item">                
+                            <a href="#menusanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
+                                <i class="fa fa-list-alt" aria-hidden="true"></i> San Pham
+                            </a>
+                                <ul class="collapse " id="menusanpham" style>
+                                    <li class="nav">
+                                        <a class="nav-link" href="?page=danhsachsanpham">
+                                            <i class="fa fa-angle-double-right" aria-hidden="true"></i> Danh sach
+                                        </a>
+                                    </li>                         
+                                    <li class="nav">
+                                        <a class="nav-link" href="?page=themsanpham">
+                                            <i class="fa fa-angle-double-right" aria-hidden="true"></i> Them San Pham
+                                        </a>
+                                    </li>                         
+                                </ul>
+                        </li>                 
+                            <li class="nav-item">                
+                            <a href="#menunhasanxuat" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
+                                    <i class="fa fa-list-alt" aria-hidden="true"></i> Nha San Xuat
+                            </a>
+                                <ul class="collapse " id="menunhasanxuat" style>
+                                    <li class="nav">
+                                        <a class="nav-link" href="?page=danhsachnhasanxuat">
+                                            <i class="fa fa-angle-double-right" aria-hidden="true"></i> Danh sach
+                                        </a>
+                                    </li>                         
+                                    <li class="nav">
+                                        <a class="nav-link" href="?page=themnhasanxuat">
+                                            <i class="fa fa-angle-double-right" aria-hidden="true"></i> Them Nha San Xuat
+                                        </a>
+                                    </li>                         
+                                </ul>
+                        </li>                 
+                        <li class="nav-item">                
+                            <a class="nav-link" href="?page=themhinhsanpham">
+                                <i class="fa fa-list-alt" aria-hidden="true"></i> Them Hinh San Pham
+                            </a>
+                        </li>                 
+                    </ul>
+                </div>
+                <div class="col-md-10 col-12 col-xl-10 bg " >
+                <?php
+                    $page = isset($_GET['page']) ? $_GET['page'] : 'sanpham_danhsach';
+
+                    if($page == 'danhsachloaisanpham'){
+                        include('loaisanpham/capnhatdanhsach.php');
+                    }   
+                    else if($page == 'danhsachsanpham'){
+                        include('sanpham/danhsachsanpham.php');
+                    }   
+                    else if($page == 'danhsachnhasanxuat'){
+                        include('nhasanxuat/danhsachnhasanxuat.php');
+                    }   
+                    else if($page == 'danhsachnhasanxuat'){
+                        include('nhasanxuat/danhsachnhasanxuat.php');
+                    }   
+                    else if($page == 'themloaisanpham'){
+                        include('loaisanpham/themloaisanpham.php');
+                    }   
+                    else if($page == 'themsanpham'){
+                        include('sanpham/themsanpham.php');
+                    }   
+                    else if($page == 'sualoaisanpham'){
+                        include('loaisanpham/sua.php');
+                    }   
+                    else if($page == 'suasanpham'){
+                        include('sanpham/suasanpham.php');
+                    }   
+                    else if($page == 'themhinhsanpham'){
+                        include('hinhsanpham/them.php');
+                    }   
+                    ?>
+                    
+                </div><!-- /End content -->
             </div>
-                <ul class="nav flex-column table table-hover ">
-                    <li class="nav-item light">                
-                       <a href="#menuloaisanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
-                             <i class="fa fa-list-ul" aria-hidden="true"></i> Loai san pham
-                       </a>
-                         <ul class="collapse " id="menuloaisanpham" style>
-                            <li class="nav-item">
-                                <a class="nav-link" href="?page=danhsachloaisanpham">
-                                    <i class="fa fa-plus-square-o" aria-hidden="true"></i> Danh sach
-                                </a>
-                            </li>                         
-                            <li class="nav-item">
-                                <a class="nav-link" href="?page=themloaisanpham">
-                                <i class="fa fa-plus-square-o" aria-hidden="true"></i> Them Loai San Pham
-                                </a>
-                            </li>                         
-                         </ul>
-                    </li>                 
-                    <li class="nav-item">                
-                       <a href="#menusanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
-                            <i class="fa fa-list-ul" aria-hidden="true"></i> San Pham
-                       </a>
-                         <ul class="collapse " id="menusanpham" style>
-                            <li class="nav-item">
-                                <a class="nav-link" href="?page=danhsachsanpham">
-                                    Danh sach
-                                </a>
-                            </li>                         
-                            <li class="nav-item">
-                                <a class="nav-link" href="?page=themsanpham">
-                                    Them San Pham
-                                </a>
-                            </li>                         
-                         </ul>
-                   </li>                 
-                    <li class="nav-item">                
-                       <a href="#menunhasanxuat" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
-                          <i class="fa fa-list-ul" aria-hidden="true"></i> Nha San Xuat
-                       </a>
-                         <ul class="collapse " id="menunhasanxuat" style>
-                            <li class="nav-item">
-                                <a class="nav-link" href="?page=danhsachnhasanxuat">
-                                    Danh sach
-                                </a>
-                            </li>                         
-                            <li class="nav-item">
-                                <a class="nav-link" href="?page=themnhasanxuat">
-                                    Them Nha San Xuat
-                                </a>
-                            </li>                         
-                         </ul>
-                   </li>                 
-                </ul>
-             </div>
-              <div class="col-md-10  bg" >
-              <?php
-                $page = isset($_GET['page']) ? $_GET['page'] : 'sanpham_danhsach';
-
-                if($page == 'danhsachloaisanpham'){
-                    include('loaisanpham/capnhatdanhsach.php');
-                }   
-                else if($page == 'danhsachsanpham'){
-                    include('sanpham/danhsachsanpham.php');
-                }   
-                else if($page == 'danhsachnhasanxuat'){
-                    include('nhasanxuat/danhsachnhasanxuat.php');
-                }   
-                else if($page == 'danhsachnhasanxuat'){
-                    include('nhasanxuat/danhsachnhasanxuat.php');
-                }   
-                else if($page == 'themloaisanpham'){
-                    include('loaisanpham/themloaisanpham.php');
-                }   
-                else if($page == 'themsanpham'){
-                    include('sanpham/themsanpham.php');
-                }   
-                else if($page == 'sualoaisanpham'){
-                    include('loaisanpham/sua.php');
-                }   
-                 
-                 ?>
-                
-            </div><!-- /End content -->
-        </div>
-       </div> 
-       
+        </div> 
+        <div class="container-fluid">
+            <div class="row table-dark">
+                <div class="col-md-12 col-12 col-xl-12  ">
+                    <h1>Hành Trang Tương  Lai</h1>
+                </div>    
+            </div>
+        </div>      
     </div>
+     
+</div>
+    
 
-    </div>
+   
 
 
 <!-- Liên kết thư viện JQuery -->
@@ -131,51 +147,19 @@
 <!-- Liên kết thư viện sweetalert 2 -->  
     <script src="public/vendor/seetarlert2/sweetalert2.all.min.js"> </script>
 <!-- Custom script -->
-    <script src=public/js/sanpham/sanpham.js></script>   
+<script src=public/js/sanpham/sanpham.js></script>    
 
 
-    <?php if($page == 'themsanpham') : ?>
-        <script src="public/vendor/distvalidation/jquery.validate.min.js"></script>
-        <script src="public/vendor/distvalidation/localization/messages_vi.min.js"></script>
-        <script src="public/js/sanpham/sanpham-validate.js"></script>
-    <?php endif ?> 
-    
+
+
+
+<?php  if($page == 'themsanpham') : ?>
+    <script src="public/vendor/jqueryvalidation/jquery.validate.min.js"> </script>         
+    <script src="public/vendor/jqueryvalidation/localization/messages_vi.min.js"> </script>
+    <script src="public/js/sanpham/sanpham-validate.js"> </script>
+<?php endif ?>    
 </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <!--          <ul class="list-group">
+</html> <!--          <ul class="list-group">
                     <li class="list-group-item"><a href="?page=danhsachloaisanpham" class="nav-link dropdown-toggle">Loại sản phẩm</a>
                         <ul class="collapse" id="loaisanphamMenu">
                           

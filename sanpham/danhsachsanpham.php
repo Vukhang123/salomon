@@ -32,7 +32,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         Danh Sách Sản Phẩm
    </h1> 
 </div>
-<a href="/salomon/?page=themsanpham" class="btn btn-outline-primary"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm Sản phẩm</a>
+<a href="/salomon/?page=themsanpham" class="btn btn-success"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm Sản phẩm</a>
 <div class="table-responsive-sm">
 <table class="table table-bordered table-hover table-sm">
     <thead class="thead-dark">
@@ -64,6 +64,9 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
             <td>
                <!-- <a href="/salomon/?page=suasanpham?sp_ma=<?= $row['sp_ma']; ?>">Sửa</a>
                 <a href="/web02/sanpham/xoa.php?sp_ma=<?= $row['sp_ma']; ?>">Xóa</a>-->
+                <button class="btn btn-primary btn-edit " data-sp-ma="<?= $row['sp_ma']?>">
+                        <i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Edit
+                </button>
                 <button class="btn btn-danger btn-delete " data-sp-ma="<?= $row['sp_ma']?>">
                         <i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Delete
                 </button>
