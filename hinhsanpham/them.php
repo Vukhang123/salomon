@@ -68,6 +68,10 @@ if(isset($_POST['btnLuu'])) {
         $hsp_tentaptin = $_FILES['hsp_tentaptin']['name'];
         move_uploaded_file($_FILES['hsp_tentaptin']['tmp_name'], $upload_dir.$hsp_tentaptin);
         echo 'File Uploaded';
+
+         // Insert dữ liệu vào Database
+         $sqlInsert = "INSERT INTO hinhsanpham	(hsp_tentaptin, sp_ma) VALUES ('$hsp_tentaptin', $sp_ma)";
+         $result = mysqli_query($conn, $sqlInsert);
     }
 }
 ?>

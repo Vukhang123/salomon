@@ -80,11 +80,24 @@
                                     </li>                         
                                 </ul>
                         </li>                 
-                        <li class="nav-item">                
-                            <a class="nav-link" href="?page=themhinhsanpham">
-                                <i class="fa fa-list-alt" aria-hidden="true"></i> Them Hinh San Pham
+                            <li class="nav-item">                
+                            <a href="#hinhsanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
+                                    <i class="fa fa-list-alt" aria-hidden="true"></i> Hinh San Pham
                             </a>
+                                <ul class="collapse " id="hinhsanpham" style>
+                                    <li class="nav">
+                                        <a class="nav-link" href="?page=themhinhsanpham">
+                                            <i class="fa fa-angle-double-right" aria-hidden="true"></i> Hinh San Pham
+                                        </a>
+                                    </li>                         
+                                    <li class="nav">
+                                        <a class="nav-link" href="?page=danhsachhinh">
+                                            <i class="fa fa-angle-double-right" aria-hidden="true"></i> Danh Sach
+                                        </a>
+                                    </li>                         
+                                </ul>
                         </li>                 
+                                       
                     </ul>
                 </div>
                 <div class="col-md-10 col-12 col-xl-10 bg " >
@@ -117,6 +130,9 @@
                     }   
                     else if($page == 'themhinhsanpham'){
                         include('hinhsanpham/them.php');
+                    }   
+                    else if($page == 'danhsachhinh'){
+                        include('hinhsanpham/danhsach.php');
                     }   
                     ?>
                     
