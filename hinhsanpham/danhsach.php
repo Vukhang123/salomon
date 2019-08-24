@@ -38,15 +38,15 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     <tr>
         <td><?= $row['hsp_ma']; ?></td>
         <td><?= $row['sp_ten']; ?></td>
-        <td><?php echo $row['sp_gia']; ?></td>
+        <td><?= $row['sp_gia']; ?></td>
         <td>
         <img src="/salomon/public/uploads/<?= $row['hsp_tentaptin']; ?>"  class="img-thumbnail">
         </td>
         <td>
-                 <button class="btn btn-primary btn-edit " data-sp-ma="<?= $row['sp_ma']?>">
+                 <button class="btn btn-primary btn-edit " data-hsp-ma="<?= $row['hsp_ma']?>">
                         <i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Edit
                 </button>
-                <button class="btn btn-danger btn-delete " data-sp-ma="<?= $row['sp_ma']?>">
+                <button class="btn btn-danger btn-delete " data-hsp-ma="<?= $row['hsp_ma']?>">
                         <i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Delete
                 </button>
     </td>

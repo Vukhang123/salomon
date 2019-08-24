@@ -30,7 +30,7 @@
                 <div class="col-md-2 col-12 col-xl-2 table-dark ">          
                         <ul class="nav flex-column ">
                             <li class="nav-item a1 ">                
-                            <a href="#menuloaisanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle a ">
+                            <a href="#menuloaisanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle a nav-brand ">
                                     <i class="fa fa-list-alt" aria-hidden="true"></i> Loai san pham
                             </a>
                                 <ul class="collapse " id="menuloaisanpham" style>
@@ -134,6 +134,9 @@
                     else if($page == 'danhsachhinh'){
                         include('hinhsanpham/danhsach.php');
                     }   
+                    else if($page == 'xoahinh'){
+                        include('hinhsanpham/xoa.php');
+                    }   
                     ?>
                     
                 </div><!-- /End content -->
@@ -149,10 +152,6 @@
     </div>
      
 </div>
-    
-
-   
-
 
 <!-- Liên kết thư viện JQuery -->
     <script src="public/vendor/jquery/jquery-3.4.1.min.js"> </script>
@@ -163,11 +162,10 @@
 <!-- Liên kết thư viện sweetalert 2 -->  
     <script src="public/vendor/seetarlert2/sweetalert2.all.min.js"> </script>
 <!-- Custom script -->
-<script src=public/js/sanpham/sanpham.js></script>    
 
-
-
-
+<?php if($page == 'danhsach' ) :?> 
+    <script src=public/js/hinhsanpham/hinhsanpham.js></script>    
+<?php endif ?>
 
 <?php  if($page == 'themsanpham') : ?>
     <script src="public/vendor/jqueryvalidation/jquery.validate.min.js"> </script>         
