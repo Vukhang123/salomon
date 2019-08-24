@@ -17,15 +17,17 @@
                     <div class="row table-dark ">
                         <div class="col-md-2 col-12 col-xl-2 ">
                         <i class="fa fa-tags fw"></i> Danh Sach
-                        </div>    
-                        
-                        <div class="col-md-10 col-12 col-xl-10 ">
-                            Dang Nhap
+                        </div>       
+                        <div class="col-md-2 col-12 col-xl-2 ">
+                            <a class="" href="?page=dangky">Đăng Ký</a>
+                        </div> 
+                        <div class="col-md-8 col-12 col-xl-8 ">
+                            Đăng Xuất
                         </div>    
                     </div>
     </div>            
-        <div class="container-fluid">    
-            <div class="row">
+        <div class="container-fluid  h-100">    
+            <div class="row justify-content-center h-100" style="min-height: 1000px;">
                 <!-- Noi Dung -->
                 <div class="col-md-2 col-12 col-xl-2 table-dark ">          
                         <ul class="nav flex-column ">
@@ -137,6 +139,9 @@
                     else if($page == 'xoahinh'){
                         include('hinhsanpham/xoa.php');
                     }   
+                    else if($page == 'dangky'){
+                        include('page/dangky.php');
+                    }   
                     ?>
                     
                 </div><!-- /End content -->
@@ -163,7 +168,7 @@
     <script src="public/vendor/seetarlert2/sweetalert2.all.min.js"> </script>
 <!-- Custom script -->
 
-<?php if($page == 'danhsach' ) :?> 
+<?php if($page == 'danhsachhinh' ) :?> 
     <script src=public/js/hinhsanpham/hinhsanpham.js></script>    
 <?php endif ?>
 
