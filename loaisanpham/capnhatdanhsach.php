@@ -67,36 +67,36 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 </div>
 <a href="/salomon/?page=themloaisanpham" class="btn btn-success"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm Loại sản phẩm</a>
 <div class="table-responsive-sm">
-<table class="table table-bordered table-hover table-sm">
-    <thead class="thead-dark">
-        <tr>
-            <th>Mã</th>
-            <th>Tên</th>
-            <th>Mô Tả</th>
-            <th>Chức năng</th>
+    <table class="table table-bordered table-hover table-sm mt-2">
+        <thead class="thead-dark">
+            <tr>
+                <th>Mã</th>
+                <th>Tên</th>
+                <th>Mô Tả</th>
+                <th>Chức năng</th>
 
-         </tr>
-</thead>
-<tbody>
-<?php foreach($data as $row) : ?>
-<tr>
-    <td><?= $row['lsp_ma'];?></td>
-    <td><?= $row['lsp_ten'];?></td>
-    <td><?= $row['lsp_mota'];?></td>
-    <td>
-    <button class="btn btn-primary btn-edit " data-sp-ma="<?= $row['sp_ma']?>">
-                        <i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Edit
-                </button>
-                <button class="btn btn-danger btn-delete " data-sp-ma="<?= $row['sp_ma']?>">
-                        <i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Delete
-                </button>
-    </td>
+            </tr>
+    </thead>
+    <tbody>
+    <?php foreach($data as $row) : ?>
+    <tr>
+        <td><?= $row['lsp_ma'];?></td>
+        <td><?= $row['lsp_ten'];?></td>
+        <td><?= $row['lsp_mota'];?></td>
+        <td>
+        <button class="btn btn-primary btn-edit " data-sp-ma="<?= $row['sp_ma']?>">
+                            <i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Edit
+                    </button>
+                    <button class="btn btn-danger btn-delete " data-sp-ma="<?= $row['sp_ma']?>">
+                            <i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Delete
+                    </button>
+        </td>
 
-</tr>
-<?php endforeach; ?>
+    </tr>
+    <?php endforeach; ?>
 
-</tbody>
-</table> 
+    </tbody>
+    </table> 
 <nav aria-label="Page navigation example">
   <ul class="pagination">
     <li class="page-item"><a class="page-link" href="#">Previous</a></li>

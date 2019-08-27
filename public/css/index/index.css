@@ -1,0 +1,24 @@
+.nav { 
+    background-color: #2d3135;
+    
+}
+.nav ul{
+    padding: 10px;  
+}
+.nav li:hover{
+    border-left: 4px solid #3e84c1;
+    background-color: #34383d;
+}
+.nav a{ 
+    padding: 20px 30px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 15px;
+}
+.nav a:hover{
+    color:#fff; 
+}
+.nav ul li ul li:hover{
+    border-left: 2px solid #ff1b06;
+    background-color: #34383d;
+}

@@ -4,8 +4,19 @@ require_once __DIR__ . '/../dbconnect.php';
 ?>
 
 <form id="frmDangKy" name="frmDangKy" method="post" action="">
-Tên đăng nhập: <input type="text" name="kh_tendangnhap" id="kh_tendangnhap" class="form-control" placeholder="Tên Đăng Nhập"/><br />
-Mật khẩu: <input type="password" name="kh_matkhau" id="kh_matkhau" class="form-control" placeholder="Mật Khẩu"/><br />
+
+<div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Tên Đăng Nhập</label>
+      <input type="text" class="form-control" name="kh_tendangnhap" id="kh_tendangnhap" placeholder="Tên Đăng Nhập">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Password</label>
+      <input type="password" class="form-control" name="kh_matkhau" id="kh_matkhau" placeholder="Password">
+    </div>
+  </div>
+<!-- Tên đăng nhập: <input type="text" name="kh_tendangnhap" id="kh_tendangnhap" class="form-control" placeholder="Tên Đăng Nhập"/><br />
+Mật khẩu: <input type="password" name="kh_matkhau" id="kh_matkhau" class="form-control" placeholder="Mật Khẩu"/><br /> -->
 Tên: <input type="text" name="kh_ten" id="kh_ten" class="form-control" placeholder="Name"/><br />
 Giới tính: 
 <select name="kh_gioitinh" id="kh_gioitinh" class="form-control">
@@ -16,7 +27,7 @@ Giới tính:
 <br />
 Địa chỉ: <input type="text" name="kh_diachi" id="kh_diachi" class="form-control" placeholder="Adress"/><br />
 Điện thoại: <input type="text" name="kh_dienthoai" id="kh_dienthoai" class="form-control" placeholder="Number Phone"/><br />
-Email: <input type="text" name="kh_email" id="kh_email" class="form-control" placeholder="Email"/><br />
+Email: <input type="text" name="kh_email" id="kh_email" class="form-control"  placeholder="Enter email"/><br />
 Ngày sinh: <input type="text" name="kh_ngaysinh" id="kh_ngaysinh" class="form-control" placeholder="Day"/><br />
 Tháng sinh: <input type="text" name="kh_thangsinh" id="kh_thangsinh" class="form-control" placeholder="Month"/><br />
 Năm sinh: <input type="text" name="kh_namsinh" id="kh_namsinh" class="form-control" placeholder="Year"/><br />

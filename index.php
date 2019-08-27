@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Salomon</title>
     <link href="public/vendor/boostrap/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="public/css/index/index.css" type="text/css" rel="stylesheet" />
     <link href="public/css/sanpham/sanpham.css" type="text/css" rel="stylesheet" />
     <link href="public/vendor/fonawesone/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
     <style>
-    
+
     </style>
 </head>
 <body>
@@ -26,13 +27,13 @@
                         </div>    
                     </div>
     </div>            
-        <div class="container-fluid  h-100">    
-            <div class="row justify-content-center h-100" style="min-height: 1000px;">
+        <div class="container-fluid  ">    
+            <div class="row " style="min-height: 1000px">
                 <!-- Noi Dung -->
-                <div class="col-md-2 col-12 col-xl-2 table-dark ">          
-                        <ul class="nav flex-column ">
-                            <li class="nav-item a1 ">                
-                            <a href="#menuloaisanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle a nav-brand ">
+                <div class="col-md-2 col-12 col-xl-2 nav   ">          
+                        <ul class="flex-column">
+                            <li class="nav-item">                
+                            <a href="#menuloaisanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
                                     <i class="fa fa-list-alt" aria-hidden="true"></i> Loai san pham
                             </a>
                                 <ul class="collapse " id="menuloaisanpham" style>
@@ -48,7 +49,7 @@
                                     </li>                         
                                 </ul>
                             </li>                 
-                            <li class="nav-item">                
+                            <li class="">                
                             <a href="#menusanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
                                 <i class="fa fa-list-alt" aria-hidden="true"></i> San Pham
                             </a>
@@ -65,7 +66,7 @@
                                     </li>                         
                                 </ul>
                         </li>                 
-                            <li class="nav-item">                
+                            <li class="">                
                             <a href="#menunhasanxuat" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
                                     <i class="fa fa-list-alt" aria-hidden="true"></i> Nha San Xuat
                             </a>
@@ -82,7 +83,7 @@
                                     </li>                         
                                 </ul>
                         </li>                 
-                            <li class="nav-item">                
+                            <li class="">                
                             <a href="#hinhsanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
                                     <i class="fa fa-list-alt" aria-hidden="true"></i> Hinh San Pham
                             </a>
@@ -146,17 +147,10 @@
                     
                 </div><!-- /End content -->
             </div>
-        </div> 
-        <div class="container-fluid">
-            <div class="row table-dark">
-                <div class="col-md-12 col-12 col-xl-12  ">
-                    <h1>Hành Trang Tương  Lai</h1>
-                </div>    
-            </div>
-        </div>      
-    </div>
-     
+        </div>    
+    </div>   
 </div>
+
 
 <!-- Liên kết thư viện JQuery -->
     <script src="public/vendor/jquery/jquery-3.4.1.min.js"> </script>
