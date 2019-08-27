@@ -28,7 +28,7 @@
                     </div>
     </div>            
         <div class="container-fluid  ">    
-            <div class="row " style="min-height: 1000px">
+            <div class="row " id="main-content">
                 <!-- Noi Dung -->
                 <div class="col-md-2 col-12 col-xl-2 nav   ">          
                         <ul class="flex-column">
@@ -171,6 +171,18 @@
     <script src="public/vendor/jqueryvalidation/localization/messages_vi.min.js"> </script>
     <script src="public/js/sanpham/sanpham-validate.js"> </script>
 <?php endif ?>    
+
+
+
+<script>
+$(document).ready(function() {
+    var scrHeight = screen.height;
+    $('#main-content').css({
+        height: scrHeight + 'px'
+    });
+});
+</script>
+
 </body>
 </html> <!--          <ul class="list-group">
                     <li class="list-group-item"><a href="?page=danhsachloaisanpham" class="nav-link dropdown-toggle">Loại sản phẩm</a>
