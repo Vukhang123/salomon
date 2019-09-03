@@ -5,4 +5,7 @@
 // Lưu ý: gõ với bộ gõ UNIKEY, bảng mã là UNICODE
 $conn->query("SET NAMES 'utf8'"); 
 $conn->query("SET CHARACTER SET utf8"); 
+
+//session_start
+session_start();
 ?>

@@ -154,5 +154,6 @@ use PHPMailer\PHPMailer\Exception;
         }
         }
         ?>
+    </div>    
 </body>
 </html>
