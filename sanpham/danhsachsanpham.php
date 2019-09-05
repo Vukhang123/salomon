@@ -34,7 +34,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 </div>
 <a href="/salomon/?page=themsanpham" class="btn btn-success"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm Sản phẩm</a>
 <div class="table-responsive-sm">
-<table class="table table-bordered table-hover table-sm">
+<table class="table table-bordered table-hover table-sm  mt-2">
     <thead class="thead-dark">
         <tr>
             <th>Mã sản phẩm</th>

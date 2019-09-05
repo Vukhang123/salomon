@@ -63,3 +63,18 @@ input[type=button]:hover{
      color:#fff;
     background-color:black;
 }
+input#kh_ten {
+    width: 160px;
+}
+input#kh_diachi {
+    width: 160px;
+}
+input#kh_tendangnhap {
+    width: 160px;
+}
+input#kh_ten {
+    width: 160px;
+}
+input#kh_dienthoai {
+    width: 160px;
+}

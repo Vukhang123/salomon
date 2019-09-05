@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../dbconnect.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,39 +15,45 @@ require_once __DIR__ . '/../dbconnect.php';
 </head>
 
 <body>
-    <div class="signin">
-        <form id="frmDangKy" name="frmDangKy" method="post" action="">
-            <h1 style="color: white"><i class="far fa-user"></i>Login</h1>
-            <div>
-                <i class="far fa-user"></i><input type="text"  name="kh_tendangnhap" id="kh_tendangnhap" placeholder="username"/><br>
+
+    <div class="login-box">
+        <form name="frmDangKy" id="frmDangKy" action="" method="POST">
+            <h1>Login</h1>
+            <div class="text-box">
+            <i class="fa fa-user"></i> <input type="text"  name="kh_tendangnhap" id="kh_tendangnhap" placeholder="username" /><br>
             </div>
-            <div>
-                <input type="password" name="kh_matkhau" id="kh_matkhau" placeholder="password"/><br><br>
+            <div class="text-box">
+            <i class="fa fa-key" aria-hidden="true"></i> <input type="password" name="kh_matkhau" id="kh_matkhau" placeholder="password"/><br><br>
             </div>
-            <div>
-            <button  name="btnDangNhap"  id="btnDangNhap" aria-hidden="true" >
-                dang nhap
-            </button><br><br><br><br><br><br><br>            
-            </div>
-            Don't have account? <a href="">Signin</a>
+            <button  name="btndangnhap" id="btndangnhap" class="btn" aria-hidden="true">
+                Signin 
+            </button>
+            <!-- <a href=""><input type="button" value="Log In" ></a><br><br><br><br><br><br><br>
+            Don't have account? <a href=btn"">Signin</a> -->
             
-            
-        </form>
-        <?php
-                if(isset($_POST['btnDangNhap'])) {
+        </form>  
+            <?php
+                if(isset($_POST['btndangnhap'])){
                     $kh_tendangnhap = $_POST['kh_tendangnhap'];
-                    // 123456 -> sha1('123456')
-                    // ma? hoa' mat khau?
-                    $kh_matkhau = sha1($_POST['kh_matkhau']);
-                    $sqlSelect = "select * from khachhang where kh_tendangnhap = '$kh_tendangnhap' AND kh_matkhau = '$kh_matkhau'";
+                    // mã hóa mật khẩu 
+                    $kh_matkhau = $_POST['kh_matkhau'];
+
+                    $sqlSelect = "SELECT * FROM  khachhang WHERE  kh_tendangnhap = '$kh_tendangnhap' AND kh_matkhau = '$kh_matkhau'";
                     $resultSelect = mysqli_query($conn, $sqlSelect);
+                    // 
                     $khachhangRow = mysqli_fetch_array($resultSelect, MYSQLI_ASSOC); // 1 record
+                    // print_r($sqlSelect);
                     if(empty($khachhangRow)) {
                         echo 'Đăng nhập không thành công. Vui lòng kiểm tra lại thông tin!';
                     } else {
                         echo 'Đăng nhập Thành công!';
+                        header('location: /salomon/index.php');
+                        //   Lưu username vào trong session
+                          $_SESSION['username'] = $kh_tendangnhap;
                     }
+
                 }
+                
             ?>
     </div>
 </body>

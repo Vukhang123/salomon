@@ -1,11 +1,13 @@
 @import"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 body{
+    margin: 0;
+    padding: 0;
     font-family:  sans-serif;
     color: #fff;
-    background-image: url("hinh1.jpg");
+    background: url("hinh1.jpg") no-repeat;
     background-size: cover;
 }
-.signin{
+/* .signin{
     background: rgba(44,62,80,0.7);
     padding: 40px;
     width: 200px;
@@ -73,4 +75,57 @@ a{
     display: flex;
     flex-direction: row;
     width:100%;
+} */
+
+/* .login-box{
+    width:280px;
+    position: absolute;
+} */
+.login-box {
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    left: 50%;
+}
+.login-box h1{
+ font-size: 40px;
+ float: left;
+ margin-bottom: 50px;
+ border-bottom: 1px solid rgb(0, 255, 115);
+ padding : 13px 0; 
+}
+.text-box{
+    width: 100%;
+    overflow:   hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid rgba(21, 255, 0, 0.37)
+}
+.text-box i{
+    width:26px;
+    float:left;
+    text-align: center;
+}
+.text-box input{
+    border:none;
+    outline: none;
+    background: none;
+    color : white;
+    font-size: 18px;
+    width:80px;
+    float: left;
+    margin:10px;
+}
+.btn{
+    width: 100%;
+    background: none;
+    border: 2px solid #4caf50;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    margin: 12px 0;
+    cursor: pointer;
 }

@@ -1,3 +1,6 @@
+<?php
+require_once __DIR__ . '/dbconnect.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +20,7 @@
     <div class="container-fluid">
                     <div class="row table-dark ">
                         <div class="col-md-2 col-12 col-xl-2 ">
-                        <i class="fa fa-tags fw"></i> Danh Sach
+                        <i class="fa fa-user"></i> Danh Sach
                         </div>       
                         <div class="col-md-2 col-12 col-xl-2 ">
                             <a class="" href="?page=dangky">Đăng Ký</a>
@@ -99,7 +102,12 @@
                                         </a>
                                     </li>                         
                                 </ul>
-                        </li>                 
+                        </li>   
+                        <?php if(isset($_SESSION['username']) && !empty($_SESSION['username'])) : ?>
+                        <li class="list-group-item"><a href="/salomon/page/dangxuat.php">Đăng xuất</a></li>
+                    <?php else : ?>
+                        <li class="list-group-item"><a href="/salomon/page/dangnhap.php">Đăng nhập</a></li>
+                    <?php endif ?>              
                                        
                     </ul>
                 </div>
