@@ -21,23 +21,17 @@ require_once __DIR__ . '/../dbconnect.php';
                     <div class="row table-dark ">
                         <div class="col-md-2 col-12 col-xl-2 ">
                         <i class="fa fa-user"></i> Danh Sach
-                        </div>       
-                        <div class="col-md-2 col-12 col-xl-2 ">
-                            <a class="" href="?page=dangky">Đăng Ký</a>
-                        </div> 
-                        <div class="col-md-8 col-12 col-xl-8 ">
-                            Đăng Xuất
-                        </div>    
+                        </div>           
                     </div>
     </div>            
         <div class="container-fluid  ">    
             <div class="row " id="main-content">
                 <!-- Noi Dung -->
-                <div class="col-md-2 col-12 col-xl-2 nav   ">          
+                <div class="col-md-3 col-12 col-xl-3 nav   ">          
                         <ul class="flex-column">
                             <li class="nav-item">                
                             <a href="#menuloaisanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
-                                    <i class="fa fa-list-alt" aria-hidden="true"></i> Loai san pham
+                                    <i class="fa fa-list-alt" aria-hidden="true"></i><span> Loai san pham</span>
                             </a>
                                 <ul class="collapse " id="menuloaisanpham" style>
                                     <li class="nav">
@@ -111,7 +105,7 @@ require_once __DIR__ . '/../dbconnect.php';
                                        
                     </ul>
                 </div>
-                <div class="col-md-10 col-12 col-xl-10 bg " >
+                <div class="col-md-9 col-12 col-xl-9 bg " >
                 <?php
                     $page = isset($_GET['page']) ? $_GET['page'] : 'sanpham_danhsach';
 
