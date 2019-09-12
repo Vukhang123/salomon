@@ -8,10 +8,10 @@ require_once __DIR__ . '/../dbconnect.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Salomon</title>
-    <link href="./../public/vendor/boostrap/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="./../public/vendor/bootstrap/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
     <link href="./../public/css/index/index.css" type="text/css" rel="stylesheet" />
     <link href="./../public/css/sanpham/sanpham.css" type="text/css" rel="stylesheet" />
-    <link href="./../public/vendor/fonawesone/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    <link href="./../public/vendor/fontawesome/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
     <style>
 
     </style>
@@ -27,14 +27,14 @@ require_once __DIR__ . '/../dbconnect.php';
         <div class="container-fluid  ">    
             <div class="row " id="main-content">
                 <!-- Noi Dung -->
-                <div class="col-md-3 col-12 col-xl-3 nav   ">          
-                        <ul class="flex-column">
+                <div class="col-md-3 col-12 col-xl-3 nav ">          
+                        <ul class="flex-column ">
                             <li class="nav-item">                
                             <a href="#menuloaisanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
                                     <i class="fa fa-list-alt" aria-hidden="true"></i><span> Loai san pham</span>
                             </a>
                                 <ul class="collapse " id="menuloaisanpham" style>
-                                    <li class="nav">
+                                    <li class="nav-item">
                                         <a class="nav-link" href="?page=danhsachloaisanpham">
                                             <i class="fa fa-angle-double-right" aria-hidden="true"></i> Danh sach
                                         </a>
@@ -47,7 +47,7 @@ require_once __DIR__ . '/../dbconnect.php';
                                 </ul>
                             </li>                 
                             <li class="">                
-                            <a href="#menusanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
+                            <a href="#menusanpham" data-toggle="collapse" aria-expanded="true" class="nav dropdown-toggle">
                                 <i class="fa fa-list-alt" aria-hidden="true"></i> San Pham
                             </a>
                                 <ul class="collapse " id="menusanpham" style>
@@ -159,7 +159,7 @@ require_once __DIR__ . '/../dbconnect.php';
 <!-- Liên kết thư viện POPPERJS -->
     <script src="./../public/vendor/poperjs/popper.min.js"> </script>
 <!-- Liên kết thư viện Bootstrap 4 -->
-    <script src="./../public/vendor/boostrap/bootstrap/js/bootstrap.min.js"> </script>
+    <script src="./../public/vendor/bootstrap/bootstrap/js/bootstrap.min.js"> </script>
 <!-- Liên kết thư viện sweetalert 2 -->  
     <script src="./../public/vendor/seetarlert2/sweetalert2.all.min.js"> </script>
 <!-- Custom script -->
