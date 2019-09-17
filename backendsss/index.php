@@ -8,10 +8,10 @@ require_once __DIR__ . '/../dbconnect.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Salomon</title>
-    <link href="./../public/vendor/bootstrap/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-    <link href="./../public/css/index/index.css" type="text/css" rel="stylesheet" />
-    <link href="./../public/css/sanpham/sanpham.css" type="text/css" rel="stylesheet" />
-    <link href="./../public/vendor/fontawesome/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    <link href="/../public/vendor/bootstrap/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="/../public/css/index/index.css" type="text/css" rel="stylesheet" />
+    <link href="/../public/css/sanpham/sanpham.css" type="text/css" rel="stylesheet" />
+    <link href="/../public/vendor/fontawesome/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
     <style>
 
     </style>
@@ -155,23 +155,23 @@ require_once __DIR__ . '/../dbconnect.php';
 
 
 <!-- Liên kết thư viện JQuery -->
-    <script src="./../public/vendor/jquery/jquery-3.4.1.min.js"> </script>
+    <script src="/../public/vendor/jquery/jquery-3.4.1.min.js"> </script>
 <!-- Liên kết thư viện POPPERJS -->
-    <script src="./../public/vendor/poperjs/popper.min.js"> </script>
+    <script src="/../public/vendor/poperjs/popper.min.js"> </script>
 <!-- Liên kết thư viện Bootstrap 4 -->
-    <script src="./../public/vendor/bootstrap/bootstrap/js/bootstrap.min.js"> </script>
+    <script src="/../public/vendor/bootstrap/bootstrap/js/bootstrap.min.js"> </script>
 <!-- Liên kết thư viện sweetalert 2 -->  
-    <script src="./../public/vendor/seetarlert2/sweetalert2.all.min.js"> </script>
+    <script src="/../public/vendor/seetarlert2/sweetalert2.all.min.js"> </script>
 <!-- Custom script -->
 
 <?php if($page == 'danhsachhinh' ) :?> 
-    <script src=./../public/js/hinhsanpham/hinhsanpham.js></script>    
+    <script src=/../public/js/hinhsanpham/hinhsanpham.js></script>    
 <?php endif ?>
 
 <?php  if($page == 'themsanpham') : ?>
-    <script src="./../public/vendor/jqueryvalidation/jquery.validate.min.js"> </script>         
-    <script src="./../public/vendor/jqueryvalidation/localization/messages_vi.min.js"> </script>
-    <script src="./../public/js/sanpham/sanpham-validate.js"> </script>
+    <script src="/../public/vendor/jqueryvalidation/jquery.validate.min.js"> </script>         
+    <script src="/../public/vendor/jqueryvalidation/localization/messages_vi.min.js"> </script>
+    <script src="/../public/js/sanpham/sanpham-validate.js"> </script>
 <?php endif ?>    
 
 
