@@ -98,6 +98,7 @@ $sqlDanhSachSanPham = <<<EOT
     LEFT JOIN `hinhsanpham` hsp ON sp.sp_ma = hsp.sp_ma
     LEFT JOIN `nhasanxuat` nsx ON sp.nsx_ma = nsx.nsx_ma
     LEFT JOIN `khuyenmai` km ON sp.km_ma = km.km_ma
+
 EOT;
 // Tìm theo tên sản phẩm
 $sqlWhereArr = [];
@@ -125,7 +126,7 @@ if (!empty($keyword_sotientu) && !empty($keyword_sotienden)) {
 }
 // Câu lệnh cuối cùng
 if (count($sqlWhereArr) > 0) {
-    $sqlWhere = "WHERE " . implode(' AND ', $sqlWhereArr);
+    $sqlWhere = " WHERE " . implode(' AND ', $sqlWhereArr);
     $sqlDanhSachSanPham .= $sqlWhere;
 }
 $sqlDanhSachSanPham .= <<<EOT
