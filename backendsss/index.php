@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . '/../dbconnect.php';
-?>
+$page = isset($_GET['page']) ? $_GET['page'] : 'sanpham_danhsach';
+?> 
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +10,15 @@ require_once __DIR__ . '/../dbconnect.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Salomon</title>
-    <link href="/../public/vendor/bootstrap/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-    <link href="/../public/css/index/index.css" type="text/css" rel="stylesheet" />
-    <link href="/../public/css/sanpham/sanpham.css" type="text/css" rel="stylesheet" />
-    <link href="/../public/vendor/fontawesome/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
-    <style>
+    <link href="/salomon/public/vendor/bootstrap/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="/salomon/public/css/index/index.css" type="text/css" rel="stylesheet" />
+    <link href="/salomon/public/css/sanpham/sanpham.css" type="text/css" rel="stylesheet" />
+    <link href="/salomon/public/vendor/fontawesome/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    
+    <?php if($page == 'dashboard') : ?>
+        <link rel="stylesheet" href="/salomon/public/vendor/Chart.js/Chart.min.css">
+    <?php endif ?>
 
-    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -29,6 +33,12 @@ require_once __DIR__ . '/../dbconnect.php';
                 <!-- Noi Dung -->
                 <div class="col-md-3 col-12 col-xl-3 nav ">          
                         <ul class="flex-column ">
+                            <li class="nav-item">                
+                            <a href="?page=dashboard" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
+                                    <i class="fa fa-list-alt" aria-hidden="true"></i><span>dashboard</span>
+                            </a>
+                                
+                            </li>                 
                             <li class="nav-item">                
                             <a href="#menuloaisanpham" data-toggle="collapse" aria-expanded="true" class="nav-link dropdown-toggle">
                                     <i class="fa fa-list-alt" aria-hidden="true"></i><span> Loai san pham</span>
@@ -107,7 +117,7 @@ require_once __DIR__ . '/../dbconnect.php';
                 </div>
                 <div class="col-md-9 col-12 col-xl-9 bg " >
                 <?php
-                    $page = isset($_GET['page']) ? $_GET['page'] : 'sanpham_danhsach';
+                   
 
                     if($page == 'danhsachloaisanpham'){
                         include('loaisanpham/capnhatdanhsach.php');
@@ -145,6 +155,9 @@ require_once __DIR__ . '/../dbconnect.php';
                     else if($page == 'dangky'){
                         include('page/dangky.php');
                     }   
+                    else if($page == 'dashboard'){
+                        include('page/dashboard.php');
+                    }
                     ?>
                     
                 </div><!-- /End content -->
@@ -155,24 +168,29 @@ require_once __DIR__ . '/../dbconnect.php';
 
 
 <!-- Liên kết thư viện JQuery -->
-    <script src="/../public/vendor/jquery/jquery-3.4.1.min.js"> </script>
+    <script src="/salomon/public/vendor/jquery/jquery-3.4.1.min.js"> </script>
 <!-- Liên kết thư viện POPPERJS -->
-    <script src="/../public/vendor/poperjs/popper.min.js"> </script>
+    <script src="/salomon/public/vendor/poperjs/popper.min.js"> </script>
 <!-- Liên kết thư viện Bootstrap 4 -->
-    <script src="/../public/vendor/bootstrap/bootstrap/js/bootstrap.min.js"> </script>
+    <script src="/salomon/public/vendor/bootstrap/bootstrap/js/bootstrap.min.js"> </script>
 <!-- Liên kết thư viện sweetalert 2 -->  
-    <script src="/../public/vendor/seetarlert2/sweetalert2.all.min.js"> </script>
+    <script src="/salomon/public/vendor/seetarlert2/sweetalert2.all.min.js"> </script>
 <!-- Custom script -->
 
 <?php if($page == 'danhsachhinh' ) :?> 
-    <script src=/../public/js/hinhsanpham/hinhsanpham.js></script>    
+    <script src=/salomon/public/js/hinhsanpham/hinhsanpham.js></script>    
 <?php endif ?>
 
 <?php  if($page == 'themsanpham') : ?>
-    <script src="/../public/vendor/jqueryvalidation/jquery.validate.min.js"> </script>         
-    <script src="/../public/vendor/jqueryvalidation/localization/messages_vi.min.js"> </script>
-    <script src="/../public/js/sanpham/sanpham-validate.js"> </script>
-<?php endif ?>    
+    <script src="/salomon/public/vendor/jqueryvalidation/jquery.validate.min.js"> </script>         
+    <script src="/salomon/public/vendor/jqueryvalidation/localization/messages_vi.min.js"> </script>
+    <script src="/salomon/public/js/sanpham/sanpham-validate.js"> </script>
+<?php endif ?>   
+
+ <?php if($page == 'dashboard') : ?>
+        <script src="/salomon/public/vendor/Chart.js/Chart.min.js"></script>
+        <script src="/salomon/public/js/page/dashboard.js"></script>
+<?php endif ?>
 
 
 
