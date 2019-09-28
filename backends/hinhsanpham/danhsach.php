@@ -29,9 +29,14 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 </style>
 
 
-
-<a href="?page=themhinhsanpham"class="btn btn-success"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm Loại sản phẩm</a>
-<table border="1">
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+   <h1 class="h2">
+        Danh Sách Hình Ảnh
+   </h1> 
+</div>
+<a href="?page=themhinhsanpham"class="btn btn-success mt-2"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm Hình sản phẩm</a>
+<table class="table table-bordered table-hover table-sm mt-2">
+<thead class="thead-dark">
     <tr>
         <th>Mã hình</th>
         <th>Tên sản phẩm</th>
@@ -39,6 +44,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         <th>Hình ảnh</th>
         <th>Chức năng</th>
     </tr>
+</thead>    
     <?php foreach($data as $row): ?>
     <tr>
         <td><?= $row['hsp_ma']; ?></td>

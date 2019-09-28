@@ -30,6 +30,6 @@ if(isset($_POST['btnthem'])){
     $sqlUpdate = "INSERT INTO loaisanpham (lsp_ten) VALUES (N'$lsp_ten');";
     mysqli_query($conn,$sqlUpdate);
     echo('Thanh  Cong');
-    header("location:capnhatdanhsach.php");
+    // header('location:/salomon/backends/index.php?page=capnhatdanhsach');
 }
 ?>

@@ -42,6 +42,21 @@ while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
         'SoLuong' => $row['SoLuong']
     );
 }
+
+// 2. Chuẩn bị câu truy vấn $sql
+$sqlSoLuongGopY = "select count(*) as SoLuong from `gopy`";
+// 3. Thực thi câu truy vấn SQL để lấy về dữ liệu
+$result = mysqli_query($conn, $sqlSoLuongGopY);
+// 4. Khi thực thi các truy vấn dạng SELECT, dữ liệu lấy về cần phải phân tích để sử dụng
+// Thông thường, chúng ta sẽ sử dụng vòng lặp while để duyệt danh sách các dòng dữ liệu được SELECT
+// Ta sẽ tạo 1 mảng array để chứa các dữ liệu được trả về
+$dataSoLuongGopY = [];
+while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
+{
+    $dataSoLuongGopY[] = array(
+        'SoLuong' => $row['SoLuong'] 
+    );
+}
 ?>
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
    <h1 class="h2">
@@ -68,7 +83,7 @@ while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
                     <div class="text-value" id="baocaoSanPham_SoLuong">
                         <h1><?= $dataSoLuongKhachHang[0]['SoLuong'] ?></h1>
                     </div>
-                    <div>Tổng số mặt hàng</div>
+                    <div>Tổng số khách hàng</div>
                 </div>
             </div>
             <button class="btn btn-primary btn-sm form-control" id="refreshBaoCaoSanPham">Refresh dữ liệu</button>
@@ -79,7 +94,7 @@ while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
                     <div class="text-value" id="baocaoSanPham_SoLuong">
                         <h1><?= $dataSoLuongDonHang[0]['SoLuong'] ?></h1>
                     </div>
-                    <div>Tổng số mặt hàng</div>
+                    <div>Tổng số đơn hàng</div>
                 </div>
             </div>
             <button class="btn btn-primary btn-sm form-control" id="refreshBaoCaoSanPham">Refresh dữ liệu</button>
@@ -88,9 +103,9 @@ while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
             <div class="card text-white bg-dark mb-2">
                 <div class="card-body pb-0">
                     <div class="text-value" id="baocaoSanPham_SoLuong">
-                        <!-- <h1><?= $dataSoLuongdonHang[0]['SoLuong'] ?></h1> -->
+                        <!-- <h1><?= $dataSoLuonggopy[0]['SoLuong'] ?></h1> -->
                     </div>
-                    <div>Tổng số mặt hàng</div>
+                    <div>Tổng số góp ý</div>
                 </div>
             </div>
             <button class="btn btn-primary btn-sm form-control" id="refreshBaoCaoSanPham">Refresh dữ liệu</button>
@@ -98,10 +113,10 @@ while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
     </div><!-- row -->
     
     <div class="row">
-        <!-- Biểu đồ thống kê loại sản phẩm -->
+       <!-- Biểu đồ thống kê loại sản phẩm -->
         <div class="col-sm-6 col-lg-6">
             <canvas id="chartOfobjChartThongKeLoaiSanPham"></canvas>
             <button class="btn btn-outline-primary btn-sm form-control" id="refreshThongKeLoaiSanPham">Refresh dữ liệu</button>
         </div><!-- col -->
-    </div><!-- row -->
 </div>
+

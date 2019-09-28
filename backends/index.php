@@ -11,13 +11,12 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
     <title>Salomon</title>
     <link href="/salomon/public/vendor/bootstrap/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
     <link href="/salomon/public/vendor/fontawesome/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
-    <link rel="stylesheet" href="/salomon/public/assets/backend/css/app.css" type="text/css" />
+  
     <link rel="stylesheet" href="/salomon/public/backend/css/app.css" type="text/css" />
     
     <?php if($page == 'dashboard') : ?>
         <link rel="stylesheet" href="/salomon/public/vendor/Chart.js/Chart.min.css">
     <?php endif ?>
-
 </head>
 <body class="d-flex flex-column h-100">
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
@@ -36,7 +35,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
             <ul class="nav flex-column">
                 <!-- Bảng Tin -->
                 <li class="nav-item">
-                    <a class="nav-link active dropdown-toggle" href="?page=dashboard"  data-toggle="collapse" aria-expanded="true">
+                    <a class="nav-link active dropdown-toggle" href="?page=dashboard"  aria-expanded="true">
                         <i class="fa fa-bar-chart" aria-hidden="true"></i>
                         <span>Bảng Tin</span>
                     </a>
@@ -156,6 +155,9 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                    else if($page == 'themsanpham'){
                     include('sanpham/themsanpham.php');
                    }  
+                   else if($page == 'suasanpham'){
+                    include('sanpham/suasanpham.php');
+                   }  
                    else if($page == 'hinhsanpham'){
                        include('hinhsanpham/danhsach.php');
                    }
@@ -164,6 +166,9 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                    }
                    else if($page == 'danhsachnhasanxuat'){
                        include('nhasanxuat/danhsachnhasanxuat.php');
+                   }
+                   else if($page == 'themnhasanxuat'){
+                       include('nhasanxuat/themnhasanxuat.php');
                    }
                    else if($page == 'themnhasanxuat'){
                        include('nhasanxuat/themnhasanxuat.php');
@@ -179,7 +184,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
 <!-- Liên kết thư viện JQuery -->
 <script src="/salomon/public/vendor/jquery/jquery-3.4.1.min.js"> </script>
 <!-- Liên kết thư viện POPPERJS -->
-    <script src="/salomon/public/vendor/poperjs/popper.min.js"> </script>
+    <script src="/salomon/public/vendor/popperjs/popper.min.js"> </script>
 <!-- Liên kết thư viện Bootstrap 4 -->
     <script src="/salomon/public/vendor/bootstrap/bootstrap/js/bootstrap.min.js"> </script>
 <!-- Liên kết thư viện sweetalert 2 -->  
@@ -201,9 +206,14 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
     <script src="/salomon/public/js/loaisanpham/loaisanpham.js"> </script>
 <?php endif ?>  
 <!-- danhsach_hinhsanpham  -->
-<?php  if($page == 'danhsachloaisanpham') : ?>
+<?php  if($page == 'hinhsanpham') : ?>
     <script src="/salomon/public/vendor/jqueryvalidation/jquery.validate.min.js"> </script>         
-    <script src="/salomon/public/js/loaisanpham/loaisanpham.js"> </script>
+    <script src="/salomon/public/js/hinhsanpham/hinhsanpham.js"> </script>
+<?php endif ?>  
+<!-- danhsach_nhasanxuat  -->
+<?php  if($page == 'danhsachnhasanxuat') : ?>
+    <script src="/salomon/public/vendor/jqueryvalidation/jquery.validate.min.js"> </script>         
+    <script src="/salomon/public/js/nhasanxuat/nhasanxuat.js"> </script>
 <?php endif ?>  
 
     

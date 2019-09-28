@@ -6,7 +6,7 @@ $sqlDeleteSanPham = "DELETE FROM sanpham WHERE sp_ma = $sp_ma;";
 //print_r($sqlDeleteSanPham); die;
 $result = mysqli_query($conn, $sqlDeleteSanPham);
 // đường dẫn tương đối
-header('location: ?page=danhsachsanpham');
+header('location: /salomon/backends/index.php?page=danhsachsanpham');
 // đường dẫn tuyệt đối
 //header('location: danhsach.php');
 ?>

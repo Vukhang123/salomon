@@ -1,6 +1,6 @@
 <?php
     require_once __DIR__ . '/../../dbconnect.php';
-    $lsp_ma = $_GET['id'];
+    $lsp_ma = $_GET['lsp_ma'];
     echo "Đây là ID cua " . $lsp_ma;
     $sqlSelect = "SELECT * from loaisanpham where lsp_ma = $lsp_ma ";
     $resultSelect = mysqli_query($conn,$sqlSelect);

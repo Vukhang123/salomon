@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 require_once __DIR__ . '/../dbconnect.php';
 $page = isset($_GET['page']) ? $_GET['page'] : 'sanpham_danhsach';
 ?> 
@@ -195,7 +195,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'sanpham_danhsach';
 
 
 </body>
-</html> <!--          <ul class="list-group">
+</html> <!--          <ul class="list-group"> -->
                     <li class="list-group-item"><a href="?page=danhsachloaisanpham" class="nav-link dropdown-toggle">Loại sản phẩm</a>
                         <ul class="collapse" id="loaisanphamMenu">
                           

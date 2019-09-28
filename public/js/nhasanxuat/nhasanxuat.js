@@ -3,10 +3,10 @@
 $(document).ready(function () {
     // Tìm đối tượng đó, đăng ký sự kiện tương ứng
     $('.btn-delete').click(function (event) {
-        var hsp_ma = $(this).data('hsp-ma');
+        var nsx_ma = $(this).data('nsx-ma');
         debugger;
         Swal.fire({
-            title: 'Bạn co muốn xóa hsp_ma =' +hsp_ma,
+            title: 'Bạn co muốn xóa lsp_ma =' +nsx_ma,
             text: "You won't be able to revert this!",
             type: 'warning',
             showCancelButton: true,
@@ -20,7 +20,7 @@ $(document).ready(function () {
                 'Your file has been deleted.',
                 'success'
               )
-             window.location.href = "/salomon/backends/hinhsanpham/xoa.php?hsp_ma=" +hsp_ma; 
+             window.location.href = "/salomon/backends/nhasanxuat/xoa.php?nsx_ma=" +nsx_ma; 
             }
           });
     });

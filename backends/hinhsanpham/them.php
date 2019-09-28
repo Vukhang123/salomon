@@ -42,7 +42,7 @@ if(isset($_POST['btnLuu'])) {
     $sp_ma = $_POST['sp_ma'];
     // Đường dẫn để chứa thư mục upload trên ứng dụng web của chúng ta. Các bạn có thể tùy chỉnh theo ý các bạn.
     // Ví dụ: các file upload sẽ được lưu vào thư mục ./../public/uploads
-    $upload_dir = "./public/uploads/";
+    $upload_dir = "./../public/uploads/";
     // Đối với mỗi file, sẽ có các thuộc tính như sau:
     
     // $_FILES['hsp_tentaptin']['name'] = '4707_sao-khuya.jpg';
@@ -79,6 +79,9 @@ if(isset($_POST['btnLuu'])) {
          // Insert dữ liệu vào Database
          $sqlInsert = "INSERT INTO hinhsanpham(hsp_tentaptin, sp_ma)VALUES ('$hsp_tentaptin', $sp_ma)";
          $result = mysqli_query($conn, $sqlInsert);
+         echo 'Thành Công';
+         header('location:');
+
     }
 }
 ?>

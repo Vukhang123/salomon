@@ -28,11 +28,17 @@ while ($row = mysqli_fetch_array($resultnhasanxuat, MYSQLI_ASSOC)) {
 </form>
 
 <?php
-if(isset($_POST['btnthem'])){
-    $lsp_ten = $_POST['nsx_ten'];
-    $sqlUpdate = "INSERT INTO nhasanxuat (nsx_ten) VALUES (N'$nsx_ten');";
-    mysqli_query($conn,$sqlUpdate);
-    echo('Thanh  Cong');
-    header("location:danhsachnhasanxuat.php");
+if(isset($_POST['btnthem'])) 
+{
+    // Lấy dữ liệu người dùng hiệu chỉnh gởi từ REQUEST POST
+    $tenLoai = $_POST['nsx_ten'];
+    // Câu lệnh INSERT
+    $sql = "INSERT INTO `nhasanxuat` (nsx_ten) VALUES ('" . $tenLoai ."');";
+    // Thực thi INSERT
+    mysqli_query($conn, $sql);
+    // Đóng kết nối
+    mysqli_close($conn);
+    // Sau khi cập nhật dữ liệu, tự động điều hướng về trang Danh sách
+    echo 'Thành Công';
 }
 ?>

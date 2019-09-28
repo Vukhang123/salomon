@@ -20,7 +20,7 @@ $(document).ready(function () {
                 'Your file has been deleted.',
                 'success'
               )
-             window.location.href = "/salomon/sanpham/xoa.php?lsp_ma=" +lsp_ma; 
+             window.location.href = "/salomon/backends/loaisanpham/xoa.php?lsp_ma=" +lsp_ma; 
             }
           });
     });
@@ -31,7 +31,7 @@ $(document).ready(function () {
         var lsp_ma = $(this).data('lsp-ma');
         debugger;
         Swal.fire({
-            title: 'Bạn co muốn xóa lsp_ma =' +lsp_ma,
+            title: 'Bạn co muốn sửa lsp_ma =' +lsp_ma,
             text: "You won't be able to revert this!",
             type: 'warning',
             showCancelButton: true,
@@ -45,7 +45,7 @@ $(document).ready(function () {
                 'Your file has been deleted.',
                 'success'
               )
-             window.location.href = "/salomon/sanpham/xoa.php?lsp_ma=" +lsp_ma; 
+             window.location.href = "/salomon/backends/loaisanpham/sua.php?lsp_ma=" +lsp_ma; 
             }
           });
     });
