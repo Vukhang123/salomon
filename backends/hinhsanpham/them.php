@@ -1,5 +1,7 @@
 <?php
-require_once __DIR__ . '/../dbconnect.php';
+require_once __DIR__ . '/../../dbconnect.php';
+
+require_once __DIR__ . '/../../bootstrap.php';
 // Lấy dữ liệu Sản phẩm
 $sqlSanPham = <<<EOT
     SELECT * FROM sanpham;
@@ -15,16 +17,20 @@ while ($row = mysqli_fetch_array($resultSanPham, MYSQLI_ASSOC)) {
 ?>
 
 <form name="frmHinhSanPham" id="frmHinhSanPham" method="post" action="" enctype="multipart/form-data">
-    Chọn hình ảnh:
-    <input type="file" name="hsp_tentaptin" id="hsp_tentaptin" />
+    <div>
+    <label for="hsp_tentaptin">Chọn hình ảnh:</label>
+    <input type="file" name="hsp_tentaptin" id="hsp_tentaptin" class="form-control"/>
     <br />
+    </div>
+    <div>
     Chọn sản phẩm:
-    <select name="sp_ma" id="sp_ma">
+    <select name="sp_ma" id="sp_ma" class="form-control">
         <?php foreach($dataSanPham as $sanPham) : ?>
-        <option value="<?= $sanPham['sp_ma'] ?>"><?= $sanPham['sp_ten'] ?></option>
+        <option  value="<?= $sanPham['sp_ma'] ?>"><?= $sanPham['sp_ten'] ?></option>
         <?php endforeach; ?>
     </select>
     <br />
+    </div>
 
     <button name="btnLuu" id="btnLuu" class="btn btn-primary">
         <i class="fa fa-heartbeat" aria-hidden="true"></i> Lưu

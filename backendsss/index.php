@@ -181,10 +181,10 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'sanpham_danhsach';
     <script src=/salomon/public/js/hinhsanpham/hinhsanpham.js></script>    
 <?php endif ?>
 
-<?php  if($page == 'themsanpham') : ?>
+<?php  if($page == 'danhsachsanpham') : ?>
     <script src="/salomon/public/vendor/jqueryvalidation/jquery.validate.min.js"> </script>         
     <script src="/salomon/public/vendor/jqueryvalidation/localization/messages_vi.min.js"> </script>
-    <script src="/salomon/public/js/sanpham/sanpham-validate.js"> </script>
+    <script src="/salomon/public/js/sanpham/sanpham.js"> </script>
 <?php endif ?>   
 
  <?php if($page == 'dashboard') : ?>
@@ -193,15 +193,6 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'sanpham_danhsach';
 <?php endif ?>
 
 
-
-<script>
-$(document).ready(function() {
-    var scrHeight = screen.height;
-    $('#main-content').css({
-        height: scrHeight + 'px'
-    });
-});
-</script>
 
 </body>
 </html> <!--          <ul class="list-group">

@@ -1,13 +1,12 @@
-
 // Yêu cầu JS đợi HTML vẽ (render) xong hết!
 // => Thực thi những đoạn code JS nằm bên trong hàm ready();
 $(document).ready(function () {
     // Tìm đối tượng đó, đăng ký sự kiện tương ứng
     $('.btn-delete').click(function (event) {
-        var sp_ma = $(this).data('sp-ma');
+        var lsp_ma = $(this).data('lsp-ma');
         debugger;
         Swal.fire({
-            title: 'Bạn co muốn xóa sp_ma =' +sp_ma,
+            title: 'Bạn co muốn xóa lsp_ma =' +lsp_ma,
             text: "You won't be able to revert this!",
             type: 'warning',
             showCancelButton: true,
@@ -21,7 +20,7 @@ $(document).ready(function () {
                 'Your file has been deleted.',
                 'success'
               )
-             window.location.href = "/salomon/backends/sanpham/xoasanpham.php?sp_ma=" +sp_ma; 
+             window.location.href = "/salomon/sanpham/xoa.php?lsp_ma=" +lsp_ma; 
             }
           });
     });
@@ -29,10 +28,10 @@ $(document).ready(function () {
 $(document).ready(function () {
     // Tìm đối tượng đó, đăng ký sự kiện tương ứng
     $('.btn-edit').click(function (event) {
-        var sp_ma = $(this).data('sp-ma');
+        var lsp_ma = $(this).data('lsp-ma');
         debugger;
         Swal.fire({
-            title: 'Bạn co muốn sửa sp_ma =' +sp_ma,
+            title: 'Bạn co muốn xóa lsp_ma =' +lsp_ma,
             text: "You won't be able to revert this!",
             type: 'warning',
             showCancelButton: true,
@@ -46,7 +45,7 @@ $(document).ready(function () {
                 'Your file has been deleted.',
                 'success'
               )
-             window.location.href = "/salomon/backends/sanpham/suasanpham.php?sp_ma=" +sp_ma; 
+             window.location.href = "/salomon/sanpham/xoa.php?lsp_ma=" +lsp_ma; 
             }
           });
     });

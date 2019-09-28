@@ -46,6 +46,8 @@
                 {% block content %}
                 {% endblock %}
                 <!-- End block content -->
+                <!-- footer -->
+    {{ include('backend/layouts/includes/footer.html.twig') }}
             </main>
         </div>
     </div>
@@ -59,8 +61,6 @@
 
     <!-- Custom script - Các file js do mình tự viết -->
     <script src="/php/twig/assets/backend/js/app.js"></script>
-    <!-- footer -->
-    {{ include('backend/layouts/includes/footer.html.twig') }}
-<!-- end footer -->
+    
 </body>
 </html>

@@ -32,7 +32,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         Danh Sách Sản Phẩm
    </h1> 
 </div>
-<a href="/salomon/?page=themsanpham" class="btn btn-success"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm Sản phẩm</a>
+<a href="?page=themsanpham" class="btn btn-success"><i class="fa fa-plus-circle" aria-hidden="true"></i>Thêm Sản phẩm</a>
 <div class="table-responsive-sm">
 <table class="table table-bordered table-hover table-sm  mt-2">
     <thead class="thead-dark">
@@ -77,17 +77,4 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         
     </tbody>
 </table>
-<nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-end">
-            <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-            </li>
-        </ul>
-        </nav>
 </div>

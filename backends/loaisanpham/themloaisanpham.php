@@ -13,7 +13,15 @@ while ($row = mysqli_fetch_array($resultLoaisanpham, MYSQLI_ASSOC)) {
 }
 ?>
 <form name="frmLoaisanpham" id="frmLoaisanpham" method="POST" action="">
-      Tên Loại Sản Phẩm :<input type="text" class="form-control" name="lsp_ten" id="lsp_ten" /><br>
+    <div class="form-group">
+        <label for="lsp_ma">Mã loại sản phẩm</label>
+        <input type="text" class="form-control" id="lsp_ma" name="lsp_ma" placeholder="Mã loại sản phẩm" readonly>
+        <small id="lsp_maHelp" class="form-text text-muted">Mã loại sản phẩm không được hiệu chỉnh.</small>
+    </div>
+    <div class="form-group">
+        <label for="lsp_ten">Tên loại sản phẩm</label>
+        <input type="text" class="form-control" id="lsp_ten" name="lsp_ten" placeholder="Tên loại sản phẩm" >
+    </div>
       <input type="submit" name="btnthem" id="btnthem" value="Them" class="btn btn-primary"/>
 </form>
 <?php
