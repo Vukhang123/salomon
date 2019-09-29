@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/../../dbconnect.php';
 // Lấy dữ liệu cần hiệu chỉnh
-$sp_ma = $_GET['sp_ma'];
-$sqlSelectSanPham = "select * from sanpham where sp_ma = $sp_ma;";
+$sp_ma = $_POST['sp_ma'];
+$sqlSelectSanPham = "SELECT * FROM sanpham WHERE sp_ma = $sp_ma;";
 $resultSanPham = mysqli_query($conn, $sqlSelectSanPham);
 $sanphamRow = [];
 while ($row = mysqli_fetch_array($resultSanPham, MYSQLI_ASSOC)) {

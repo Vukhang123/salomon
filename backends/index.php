@@ -24,7 +24,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
         <input class="form-control form-control-dark w-100" type="text" placeholder="Tìm kiếm" aria-label="Search">
         <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
-                <a class="nav-link" href="#">Đăng xuất</a>
+                <a class="nav-link" href="/salomon/frontend/pages/login.php">Đăng Nhập</a>
             </li>
         </ul>
 </nav>
@@ -35,7 +35,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
             <ul class="nav flex-column">
                 <!-- Bảng Tin -->
                 <li class="nav-item">
-                    <a class="nav-link active dropdown-toggle" href="?page=dashboard"  aria-expanded="true">
+                    <a class="nav-link active " href="?page=dashboard"  aria-expanded="true">
                         <i class="fa fa-bar-chart" aria-hidden="true"></i>
                         <span>Bảng Tin</span>
                     </a>
@@ -60,6 +60,12 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                                 Thêm mới
                             </a>
                         </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="?page=sualoaisanpham">
+                                
+                                Sửa 
+                            </a>
+                        </li> -->
                     </ul>
                 </li>
                 <!-- Ket Thuc Loai San Pham -->
@@ -80,6 +86,12 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                                 <a class="nav-link" href="?page=themsanpham">
                                     <span data-feather="plus"></span>
                                     Thêm mới
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="?page=suasanpham">
+                                    <span data-feather="plus"></span>
+                                    Sửa
                                 </a>
                             </li>
                         </ul>
@@ -170,9 +182,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                    else if($page == 'themnhasanxuat'){
                        include('nhasanxuat/themnhasanxuat.php');
                    }
-                   else if($page == 'themnhasanxuat'){
-                       include('nhasanxuat/themnhasanxuat.php');
-                   }
+                   
                    
                    
                    ?>
@@ -208,7 +218,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
 <!-- danhsach_hinhsanpham  -->
 <?php  if($page == 'hinhsanpham') : ?>
     <script src="/salomon/public/vendor/jqueryvalidation/jquery.validate.min.js"> </script>         
-    <script src="/salomon/public/js/hinhsanpham/hinhsanpham.js"> </script>
+    <!-- <script src="/salomon/public/js/hinhsanpham/hinhsanpham.js"> </script> -->
 <?php endif ?>  
 <!-- danhsach_nhasanxuat  -->
 <?php  if($page == 'danhsachnhasanxuat') : ?>

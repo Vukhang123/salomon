@@ -20,13 +20,13 @@ $(document).ready(function() {
             }
             $objChartThongKeLoaiSanPham = new Chart($chartOfobjChartThongKeLoaiSanPham, {
                 // Kiểu biểu đồ muốn vẽ. Các bạn xem thêm trên trang ChartJS
-                type: "bar",
+                type: "radar",
                 data: {
                     labels: myLabels,
                     datasets: [{
                         data: myData,
                         borderColor: "#9ad0f5",
-                        backgroundColor: "#9ad0f5",
+                        backgroundColor: "",
                         borderWidth: 1
                     }]
                 },
@@ -48,16 +48,12 @@ $(document).ready(function() {
         }
     });
 });
-$('#refreshThongKeLoaiSanPham').click(function (event) {
-    event.preventDefault();
-    renderChartThongKeLoaiSanPham();
-});
 
-// Vẽ biểu đổ Thống kê top sản phẩm bán chạy nhất sử dụng ChartJS
-var $objChartThongKeTopSanPhamBanChayNhat;
-var $chartOfobjChartThongKeTopSanPhamBanChayNhat = document.getElementById("chartOfobjChartThongKeTopSanPhamBanChayNhat").getContext(
-    "2d");
-function renderChartThongKeTopSanPhamBanChayNhat() {
+
+var $objChartThongKeTopLoaiSanPham;
+var $chartOfobjChartThongKeTopLoaiSanPham = document.getElementById("chartOfobjChartThongKeTopLoaiSanPham").getContext("2d");
+$(document).ready(function() {
+    // Vẽ biểu đồ  sản phẩm
     $.ajax({
         url: '/salomon/backends/ajax/baocao-thongketopsanphambanchaynhat-ajax.php',
         type: "GET",
@@ -70,10 +66,10 @@ function renderChartThongKeTopSanPhamBanChayNhat() {
                 myData.push(this.SoLuong);
             });
             myData.push(0); // tạo dòng số liệu 0
-            if (typeof $objChartThongKeTopSanPhamBanChayNhat !== "undefined") {
-                $objChartThongKeTopSanPhamBanChayNhat.destroy();
+            if (typeof $objChartThongKeTopLoaiSanPham !== "undefined") {
+                $objChartThongKeTopLoaiSanPham.destroy();
             }
-            $objChartThongKeTopSanPhamBanChayNhat = new Chart($chartOfobjChartThongKeTopSanPhamBanChayNhat, {
+            $objChartThongKeTopLoaiSanPham = new Chart($chartOfobjChartThongKeTopLoaiSanPham, {
                 // Kiểu biểu đồ muốn vẽ. Các bạn xem thêm trên trang ChartJS
                 type: "horizontalBar",
                 data: {
@@ -92,23 +88,22 @@ function renderChartThongKeTopSanPhamBanChayNhat() {
                     },
                     title: {
                         display: true,
-                        text: "Thống kê Top sản phẩm bán chạy nhất"
+                        text: "Thống kê Top sản phẩm Bán Chạy"
                     },
                     responsive: true
                 }
             });
         },
         error:function(res) {
-          alert('Lỗi khi vẽ biểu đồ')
-      }
+            alert('Lỗi khi vẽ biểu đồ')
+        }
     });
-};
+});
 
-// Vẽ biểu đổ Thống kê doanh thu
-var $objChartThongKeDoanhThu;
-var $chartOfobjChartThongKeDoanhThu = document.getElementById("chartOfobjChartThongKeDoanhThu").getContext(
-    "2d");
-function renderChartThongKeDoanhThu() {
+var $objChartThongKeDanhThuSanPham;
+var $chartOfobjChartThongKeDoanhThu = document.getElementById("chartOfobjChartThongKeDoanhThu").getContext("2d");
+$(document).ready(function() {
+    // Vẽ biểu đồ  sản phẩm
     $.ajax({
         url: '/salomon/backends/ajax/baocao-thongkedoanhthu-ajax.php',
         type: "GET",
@@ -121,10 +116,10 @@ function renderChartThongKeDoanhThu() {
                 myData.push(this.TongThanhTien);
             });
             myData.push(0); // tạo dòng số liệu 0
-            if (typeof $objChartThongKeDoanhThu !== "undefined") {
-                $objChartThongKeDoanhThu.destroy();
+            if (typeof $objChartThongKeDanhThuSanPham !== "undefined") {
+                $objChartThongKeDanhThuSanPham.destroy();
             }
-            $objChartThongKeDoanhThu = new Chart($chartOfobjChartThongKeDoanhThu, {
+            $objChartThongKeDanhThuSanPham = new Chart($chartOfobjChartThongKeDoanhThu, {
                 // Kiểu biểu đồ muốn vẽ. Các bạn xem thêm trên trang ChartJS
                 type: "line",
                 data: {
@@ -143,11 +138,16 @@ function renderChartThongKeDoanhThu() {
                     },
                     title: {
                         display: true,
-                        text: "Thống kê Doanh thu"
+                        text: "Thống kê Danh Thu"
                     },
                     responsive: true
                 }
             });
+        },
+        error:function(res) {
+            alert('Lỗi khi vẽ biểu đồ')
         }
     });
-};
+});
+
+

@@ -80,7 +80,7 @@ if(isset($_POST['btnLuu'])) {
          $sqlInsert = "INSERT INTO hinhsanpham(hsp_tentaptin, sp_ma)VALUES ('$hsp_tentaptin', $sp_ma)";
          $result = mysqli_query($conn, $sqlInsert);
          echo 'Thành Công';
-         header('location:');
+         
 
     }
 }

@@ -118,5 +118,19 @@ while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
             <canvas id="chartOfobjChartThongKeLoaiSanPham"></canvas>
             <button class="btn btn-outline-primary btn-sm form-control" id="refreshThongKeLoaiSanPham">Refresh dữ liệu</button>
         </div><!-- col -->
-</div>
 
+        <!-- Biểu đồ thống kê top 5 sản phẩm bán chạy nhất -->
+        <div class="col-sm-6 col-lg-6">
+            <canvas id="chartOfobjChartThongKeTopLoaiSanPham"></canvas>
+            <button class="btn btn-outline-primary btn-sm form-control" id="refreshThongKeTopSanPhamBanChayNhat">Refresh dữ
+                liệu</button>
+        </div><!-- col -->
+        <div class="row">
+        <!-- Biểu đồ thống kê doanh thu theo ngày -->
+        <div class="col-sm-12 col-lg-12">
+            <canvas id="chartOfobjChartThongKeDoanhThu"></canvas>
+            <button class="btn btn-outline-primary btn-sm form-control" id="refreshThongKeDoanhThu">Refresh dữ
+                liệu</button>
+        </div><!-- col -->
+    </div><!-- row -->
+</div>
