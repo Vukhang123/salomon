@@ -38,7 +38,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         <td><?= $row['lsp_ten'];?></td>
         <td><?= $row['lsp_mota'];?></td>
         <td>
-                <a href="index.php?page=sualoaisanpham?lsp_ma=<?= $row['lsp_ma']?>"class="btn btn-primary btn-edit " >
+                <a href="/salomon/backends/index.php?page=sualoaisanpham&lsp_ma=<?= $row['lsp_ma']?>"class="btn btn-primary btn-edit " >
                 Edit</a>
                 <button class="btn btn-danger btn-delete " data-lsp-ma="<?= $row['lsp_ma']?>">
                         <i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Delete

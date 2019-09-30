@@ -62,11 +62,10 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
             <td><?= $row['nsx_ten'] ?></td>
             <td><?= $row['km_ten'] ?></td>
             <td>
-                <!-- <a href="/salomon/backends/index.php?page=suasanpham?sp_ma=<?= $row['sp_ma']; ?>">Sửa</a> -->
-                <!-- <a href="/web02/sanpham/xoa.php?sp_ma=<?= $row['sp_ma']; ?>">Xóa</a>-->
+    
                 
-                        <a href="index.php?page=suasanpham?sp_ma=<?= $row['sp_ma']?>"class="btn btn-primary btn-edit " >
-                        Edit</a>
+                <a href="/salomon/backends/index.php?page=suasanpham&sp_ma=<?= $row['sp_ma']?>"class="btn btn-primary btn-edit " >
+                Edit</a>
                                          
                 <button class="btn btn-danger btn-delete " data-sp-ma="<?= $row['sp_ma']?>">
                         <i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Delete

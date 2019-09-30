@@ -60,12 +60,6 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                                 Thêm mới
                             </a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="?page=sualoaisanpham">
-                                
-                                Sửa 
-                            </a>
-                        </li> -->
                     </ul>
                 </li>
                 <!-- Ket Thuc Loai San Pham -->
@@ -86,12 +80,6 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                                 <a class="nav-link" href="?page=themsanpham">
                                     <span data-feather="plus"></span>
                                     Thêm mới
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="?page=suasanpham">
-                                    <span data-feather="plus"></span>
-                                    Sửa
                                 </a>
                             </li>
                         </ul>
@@ -207,23 +195,33 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
 <?php endif ?>
 <!-- DanhSach_Sanpham -->
 <?php  if($page == 'danhsachsanpham') : ?>
-    <script src="/salomon/public/vendor/jqueryvalidation/jquery.validate.min.js"> </script>         
+    <script src="/salomon/public/vendor/distvalidation/jquery.validate.min.js"> </script>         
     <script src="/salomon/public/js/sanpham/sanpham.js"> </script>
 <?php endif ?>  
 <!-- danhsach_loaisanpham  -->
 <?php  if($page == 'danhsachloaisanpham') : ?>
-    <script src="/salomon/public/vendor/jqueryvalidation/jquery.validate.min.js"> </script>         
+    <script src="/salomon/public/vendor/distvalidation/jquery.validate.min.js"> </script>         
     <script src="/salomon/public/js/loaisanpham/loaisanpham.js"> </script>
 <?php endif ?>  
 <!-- danhsach_hinhsanpham  -->
 <?php  if($page == 'hinhsanpham') : ?>
-    <script src="/salomon/public/vendor/jqueryvalidation/jquery.validate.min.js"> </script>         
+    <script src="/salomon/public/vendor/distvalidation/jquery.validate.min.js"> </script>         
     <!-- <script src="/salomon/public/js/hinhsanpham/hinhsanpham.js"> </script> -->
 <?php endif ?>  
 <!-- danhsach_nhasanxuat  -->
 <?php  if($page == 'danhsachnhasanxuat') : ?>
-    <script src="/salomon/public/vendor/jqueryvalidation/jquery.validate.min.js"> </script>         
+    <script src="/salomon/public/vendor/distvalidation/jquery.validate.min.js"> </script>         
     <script src="/salomon/public/js/nhasanxuat/nhasanxuat.js"> </script>
+<?php endif ?>  
+<!-- sua_loaisanpham -->
+<?php  if($page == 'sualoaisanpham') : ?>
+    <script src="/salomon/public/vendor/distvalidation/jquery.validate.min.js"> </script> 
+    <script src="/salomon/public/vendor/distvalidation/localization/messages_vi.min.js"></script>        
+<?php endif ?>  
+<!-- Sua san pham -->
+<?php  if($page == 'suasanpham') : ?>
+    <script src="/salomon/public/vendor/distvalidation/jquery.validate.min.js"> </script> 
+    <script src="/salomon/public/vendor/distvalidation/localization/messages_vi.min.js"></script>        
 <?php endif ?>  
 
     

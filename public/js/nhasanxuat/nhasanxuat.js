@@ -6,7 +6,7 @@ $(document).ready(function () {
         var nsx_ma = $(this).data('nsx-ma');
         debugger;
         Swal.fire({
-            title: 'Bạn co muốn xóa lsp_ma =' +nsx_ma,
+            title: 'Bạn co muốn xóa nsx_ma =' +nsx_ma,
             text: "You won't be able to revert this!",
             type: 'warning',
             showCancelButton: true,

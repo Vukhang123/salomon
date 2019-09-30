@@ -1,7 +1,8 @@
+
 <?php
 require_once __DIR__ . '/../../dbconnect.php';
 // Lấy dữ liệu cần hiệu chỉnh
-$sp_ma = $_POST['sp_ma'];
+$sp_ma=$_GET['sp_ma'];
 $sqlSelectSanPham = "SELECT * FROM sanpham WHERE sp_ma = $sp_ma;";
 $resultSanPham = mysqli_query($conn, $sqlSelectSanPham);
 $sanphamRow = [];
@@ -131,5 +132,8 @@ if(isset($_POST['btnLuu'])) {
 EOT;
     // print_r($sqlUpdate);die;
     $resultUpdate = mysqli_query($conn, $sqlUpdate);
+    echo'Thành Công';
+    // header('location:/salomon/backends/index.php?page=danhsachsanpham');
+
 }
 ?>
